@@ -10,28 +10,23 @@ import UIKit
 import SnapKit
 
 class NewsListTableViewCell: UITableViewCell {
-    
-    let view1: UIView = {
-       var view = UIView()
-        view.backgroundColor = .red
-        return view
-    }()
+   
     private let stackView: UIStackView = {
         var stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .equalCentering
         return stackView
     }()
     
     private let keywordsView: UIView = {
         var view = UIView()
-        view.sizeToFit()
         return view
     }()
     
     private let thumNail: UIImageView = {
         var imageView = UIImageView()
         imageView.backgroundColor = .gray
+        imageView.layer.cornerRadius = 10
         return imageView
     }()
     
@@ -105,7 +100,7 @@ class NewsListTableViewCell: UITableViewCell {
         contentView.addSubview(stackView)
         contentView.addSubview(thumNail)
         
-        contentView.addSubview(title)
+        
         stackView.addArrangedSubview(title)
         stackView.addArrangedSubview(detailLabel)
         stackView.addArrangedSubview(keywordsView)
@@ -116,17 +111,17 @@ class NewsListTableViewCell: UITableViewCell {
         
         
         thumNail.snp.makeConstraints { (m) in
-            m.centerY.equalTo(contentView.snp.centerY)
-            m.height.equalTo(contentView.snp.height).multipliedBy(0.8)
+            m.centerY.equalTo(self.snp.centerY)
+            m.height.equalTo(self.snp.height).multipliedBy(0.8)
             m.width.equalTo(thumNail.snp.height)
-            m.leading.equalTo(contentView.snp.leading).offset(5)
+            m.leading.equalTo(self.snp.leading).offset(5)
         }
 
         stackView.snp.makeConstraints { (m) in
             m.centerY.equalTo(contentView.snp.centerY)
-            m.height.equalTo(thumNail.snp.height)
+            m.height.equalTo(self.snp.height).multipliedBy(0.8)
             m.leading.equalTo(thumNail.snp.trailing).offset(5)
-            m.trailing.equalTo(contentView.snp.trailing).offset(-5)
+            m.trailing.equalTo(contentView.safeAreaLayoutGuide.snp.trailing).offset(-5)
         }
         title.snp.makeConstraints { (m) in
             m.height.equalTo(stackView.snp.height).multipliedBy(0.25)
@@ -135,27 +130,32 @@ class NewsListTableViewCell: UITableViewCell {
             m.height.equalTo(stackView.snp.height).multipliedBy(0.5)
         }
         keywordsView.snp.makeConstraints { (m) in
-            m.height.equalTo(stackView.snp.height).multipliedBy(0.25)
+            m.height.equalTo(stackView.snp.height).multipliedBy(0.25) 
         }
+
         keywordLabel1.snp.makeConstraints { (m) in
             m.leading.equalTo(stackView.snp.leading)
-            
+            m.centerY.equalTo(keywordsView.snp.centerY)
         }
         keywordLabel2.snp.makeConstraints { (m) in
             m.leading.equalTo(keywordLabel1.snp.trailing).offset(5)
+            m.centerY.equalTo(keywordsView.snp.centerY)
         }
         keywordLabel3.snp.makeConstraints { (m) in
             m.leading.equalTo(keywordLabel2.snp.trailing).offset(5)
+            m.centerY.equalTo(keywordsView.snp.centerY)
         }
         
     }
     func configureCell(model: Model) {
-        thumNail.image = model.thumbNail
         title.text = model.title
         detailLabel.text = model.detail
-        keywordLabel1.setTitle(model.keywords[0], for: .normal)
-        keywordLabel2.setTitle(model.keywords[1], for: .normal)
-        keywordLabel3.setTitle(model.keywords[2], for: .normal)
+//        thumNail.image = model.thumbNail
+//        title.text = model.title
+//        detailLabel.text = model.detail
+//        keywordLabel1.setTitle(model.keywords[0], for: .normal)
+//        keywordLabel2.setTitle(model.keywords[1], for: .normal)
+//        keywordLabel3.setTitle(model.keywords[2], for: .normal)
     }
     
 }

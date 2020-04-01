@@ -101,8 +101,9 @@ class LaunchScreenViewController: UIViewController {
     }
     @objc func exitLaunchScreen() {
         let MainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
-        MainVC.modalPresentationStyle = .overFullScreen
-        self.present(MainVC, animated: false, completion: nil)
+        let newNavCon = UINavigationController(rootViewController: MainVC)
+        newNavCon.modalPresentationStyle = .overFullScreen
+        self.present(newNavCon, animated: false, completion: nil)
     }
 }
 

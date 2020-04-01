@@ -7,6 +7,7 @@ target 'RSSNewsReader' do
 
   # Pods for RSSNewsReader
   pod 'SnapKit'
+  pod 'Kanna'
   target 'RSSNewsReaderTests' do
     inherit! :search_paths
     # Pods for testing

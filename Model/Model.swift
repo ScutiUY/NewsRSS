@@ -8,21 +8,20 @@
 
 import Foundation
 import UIKit
-class Model {
+
+class Model: NSObject{
+    
     var title: String
+    var link: String
     var thumbNail: UIImage?
-    var detail: String
-    var keywords: [String]
-    init(title: String, detail: String, keywords: [String]){
+    var detail: String?
+    var keywords: [String]?
+
+    init(title: String, link: String){
         self.title = title
-        self.detail = detail
-        self.keywords = keywords
+        self.link = link
     }
-    
-    static let arr = [
-        Model(title: "Fruit", detail: "is fruitis fruitis fruitis fruitis fruitis fruit", keywords: ["banana","melon","cookie"]),
-        Model(title: "Food", detail: "is Food and some how many people say 노엘갤래거민어리;ㅁㄴ아ㅓㄹㅁ;니아ㅓㄹㅁㄴㅇㄹ", keywords: ["chocolate","melon","heart"]),
-        Model(title: "갬정과 지킬것들 키키키키키캬캬캬캬호호호호샘픎ㅇㄴㄹㅁㄴㅇㄹㅁㅁㅇㄴ", detail: "이거슨 샘플입니다 이거슨 샘플입니다 이거슨 샘플입니다 이거슨 샘플입니다 이거슨 샘플입니다 이거슨 샘플입니다", keywords: ["Free","Peace","Love"])
-    ]
-    
+   
+    static var newsData = [Model]()
 }
+
