@@ -11,14 +11,10 @@ import SnapKit
 
 class NewsListViewController: UIViewController {
     
+    private var dataList = 0
     private let newsTableView: UITableView = {
         var tableView = UITableView()
         return tableView
-    }()
-    private let redView : UIView = {
-        var view = UIView()
-        view.backgroundColor = .red
-        return view
     }()
     
     private var refreshController = UIRefreshControl()
@@ -41,7 +37,7 @@ class NewsListViewController: UIViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
-
+    
     private func setLayout() {
         
         view.addSubview(newsTableView)
@@ -73,36 +69,35 @@ class NewsListViewController: UIViewController {
         parser.parseFeed(url: url!)
         NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
             self.newsTableView.reloadData()
+            
         }
     }
-
-    
     @objc func refresh() {
+        
         print("리프레쉬 직전의 카운트\(Model.newsData.count)")
         Model.newsData.removeAll()
         print("리프레쉬를 위한 배열 삭제 \(Model.newsData.count)")
-        self.fetchData()
-        // 리프레쉬 중복확인 해야함. 리프레싱중에 다시한번 호출되면 배열 초과
+        if Parser.blank == false {
+            if Model.newsData.count == 0{
+                self.fetchData()
+            }
+        }
         refreshController.endRefreshing()
     }
-    
-        /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+   
     
 }
 extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Model.newsData.count
+        var count = 0
+        if Model.newsData.count > 0 {
+            count = Model.newsData.count
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(Model.newsData.count)
         let model = Model.newsData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListTableViewCell", for: indexPath) as? NewsListTableViewCell
         cell?.configureCell(model: model)
@@ -115,6 +110,13 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         let newsContentVC = UIStoryboard(name: "NewsContent", bundle: nil).instantiateViewController(withIdentifier: "NewsContent") as! NewsContentViewController
         newsContentVC.modalPresentationStyle = .overFullScreen
         newsContentVC.url = Model.newsData[indexPath.row].link
+        newsContentVC.articleTitle = Model.newsData[indexPath.row].title
+        if let unwrpedKeywords = Model.newsData[indexPath.row].keywords{
+        newsContentVC.keywords = unwrpedKeywords
+        }
+        if let unwrapedContent = Model.newsData[indexPath.row].content {
+            newsContentVC.htmlStr = unwrapedContent
+        }
         self.navigationController?.pushViewController(newsContentVC, animated: true)
     }
 }

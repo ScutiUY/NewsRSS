@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-
+import Untagger
 class NewsContentViewController: UIViewController {
     
     private let webView: UIWebView = {
@@ -18,12 +18,18 @@ class NewsContentViewController: UIViewController {
     }()
     
     private let spinner = UIActivityIndicatorView(style: .gray)
-    
+    let articleTitleLeft = "<h2><span class=\"title\">"
+    let articleTitleRight = "</span></h2>"
+    var articleTitle = ""
+    var keywords = [""]
+    let keywordsLeft = "<h5><span class=\"keywords\">"
+    let keywordsRight = "</span></h5>"
     var url = ""
-    
+    var htmlStr = """
+        
+    """
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setLayout()
         setURL(url: url)
     }
@@ -39,22 +45,11 @@ class NewsContentViewController: UIViewController {
     }
     
     func setURL(url: String) {
-        let request = URLRequest(url: URL(string: url)! as URL)
-        webView.loadRequest(request)
+        guard let baseURL = URL(string: url) else { return }
+        htmlStr = articleTitleLeft+articleTitle+articleTitleRight+keywordsLeft+" 키워드 : \(keywords[0]), \(keywords[1]), \(keywords[2])"+keywordsRight+htmlStr
+        webView.loadHTMLString(htmlStr, baseURL: baseURL)
     }
     
     
 }
-
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
-
 

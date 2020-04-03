@@ -25,8 +25,10 @@ class NewsListTableViewCell: UITableViewCell {
     
     private let thumNail: UIImageView = {
         var imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
         imageView.backgroundColor = .gray
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -150,12 +152,10 @@ class NewsListTableViewCell: UITableViewCell {
     func configureCell(model: Model) {
         title.text = model.title
         detailLabel.text = model.detail
-//        thumNail.image = model.thumbNail
-//        title.text = model.title
-//        detailLabel.text = model.detail
-//        keywordLabel1.setTitle(model.keywords[0], for: .normal)
-//        keywordLabel2.setTitle(model.keywords[1], for: .normal)
-//        keywordLabel3.setTitle(model.keywords[2], for: .normal)
+        thumNail.image = model.thumbNail
+        keywordLabel1.setTitle(model.keywords?[0], for: .normal)
+        keywordLabel2.setTitle(model.keywords?[1], for: .normal)
+        keywordLabel3.setTitle(model.keywords?[2], for: .normal)
     }
     
 }

@@ -16,7 +16,8 @@ class Model: NSObject{
     var thumbNail: UIImage?
     var detail: String?
     var keywords: [String]?
-
+    var content: String?
+    
     init(title: String, link: String){
         self.title = title
         self.link = link
