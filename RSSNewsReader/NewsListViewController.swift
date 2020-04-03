@@ -11,7 +11,7 @@ import SnapKit
 
 class NewsListViewController: UIViewController {
     
-    private var dataList = 0
+    private var dataList = [Model]()
     private let newsTableView: UITableView = {
         var tableView = UITableView()
         return tableView
@@ -29,6 +29,7 @@ class NewsListViewController: UIViewController {
         setLayout()
         navigationSet()
         tableViewSet()
+        activeIndicator()
         fetchData()
         // Do any additional setup after loading the view.
     }
@@ -65,24 +66,35 @@ class NewsListViewController: UIViewController {
     }
     private func fetchData() {
         
-        let parser = Parser()
-        parser.parseFeed(url: url!)
-        NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
-            self.newsTableView.reloadData()
-            
+            let parser = Parser()
+            parser.parseFeed(url: self.url!)
+            NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
+                self.newsTableView.reloadData()
+            }
+    }
+    
+    private func activeIndicator() {
+        let alert = UIAlertController(title: "로딩중", message: nil, preferredStyle: .alert)
+        let activityIndicator = UIActivityIndicatorView(frame: alert.view.bounds)
+        activityIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        activityIndicator.hidesWhenStopped = true
+        alert.view.addSubview(activityIndicator)
+        activityIndicator.isUserInteractionEnabled = false
+        activityIndicator.startAnimating()
+        self.present(alert, animated: true, completion: nil)
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
+            activityIndicator.stopAnimating()
+            alert.dismiss(animated: true, completion: nil)
         }
+        
     }
     @objc func refresh() {
         
-        print("리프레쉬 직전의 카운트\(Model.newsData.count)")
-        Model.newsData.removeAll()
-        print("리프레쉬를 위한 배열 삭제 \(Model.newsData.count)")
-        if Parser.blank == false {
-            if Model.newsData.count == 0{
-                self.fetchData()
-            }
-        }
-        refreshController.endRefreshing()
+        //Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { (timer) in
+            Model.newsData.removeAll()
+            fetchData()
+            refreshController.endRefreshing()
+        //}
     }
    
     
@@ -97,7 +109,6 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(Model.newsData.count)
         let model = Model.newsData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListTableViewCell", for: indexPath) as? NewsListTableViewCell
         cell?.configureCell(model: model)
