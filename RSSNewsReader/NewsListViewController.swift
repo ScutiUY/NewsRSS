@@ -11,7 +11,6 @@ import SnapKit
 
 class NewsListViewController: UIViewController {
     
-    private var dataList = [Model]()
     private let newsTableView: UITableView = {
         var tableView = UITableView()
         return tableView
@@ -89,12 +88,9 @@ class NewsListViewController: UIViewController {
         
     }
     @objc func refresh() {
-        
-        //Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { (timer) in
             Model.newsData.removeAll()
             fetchData()
             refreshController.endRefreshing()
-        //}
     }
    
     
