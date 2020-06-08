@@ -7,96 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C550A53C9E2047C83F8E85BBB558E6 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4056C44FE9B2453F524984062BAB4395 /* ConstraintLayoutSupportDSL.swift */; };
-		039EAFE7935113805F3FC21BF1B7C9D5 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2465A16B412970AB1966261F81204F /* LayoutConstraint.swift */; };
+		01C550A53C9E2047C83F8E85BBB558E6 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A46A8054577838D49C60142EB88B13 /* ConstraintLayoutSupportDSL.swift */; };
+		039EAFE7935113805F3FC21BF1B7C9D5 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C5B72775F6AF0891BF331F32FE10D /* LayoutConstraint.swift */; };
 		04543980C4A7CE442330B0F1BC4A9A54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		0555461B5FA96E6404D5CAE775CBB2E9 /* TrailingHeadlineToUntaggerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7BCE03CD95BCA79828CF9CC85D9BCC /* TrailingHeadlineToUntaggerFilter.swift */; };
-		0B3A3FF53E64982C8A8EFEE695C69627 /* UntaggerBlockFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB47990F997191A953D89EBCD245A400 /* UntaggerBlockFilter.swift */; };
-		0E0F0CA1D1994ED21FE387A57215629F /* Untagger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 530C95EAA5C6ACE281F64CD2F07A3439 /* Untagger-dummy.m */; };
-		0FE9F52E65EC8F49E753EF6DE3297B93 /* UntaggerHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E35184245F4BA55C2195C2C22416D972 /* UntaggerHTMLParser.m */; };
 		1649C7C5F19CBD9FCEFC32331B6AA6B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		183ED56ED5A304D31BF95FB4FF100E09 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7967FE55FF311BE486AB844E1FA8EA /* libxmlHTMLNode.swift */; };
-		1956E392D500F3CD899D39A5F805736D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18926A162C69886F2D1FEC0176563C0 /* Typealiases.swift */; };
-		1AFB1E9136716C0B61D6C700FF1E60FD /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C4E528B3A5A5287632660FBEE6BF4 /* ConstraintLayoutGuide+Extensions.swift */; };
-		1F5E8CC0E12AED9DEF1FA149713B3D29 /* Kanna-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7825C65884150E137DC1C65F4763D5FD /* Kanna-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21AB1101BBE4D28D74ED4EDF0D59025A /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476E0447207C2A0F3C86336CBE4BB0A /* ConstraintInsets.swift */; };
-		232B2F922E972D9F43D2EE15ACECE734 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35D003C047351191AD4162F288B122 /* ConstraintPriority.swift */; };
-		280ADD0C934C01BDF0EB880D6B4C2F05 /* DocumentTitleMatchClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B14E4817943BF735726A91B4C96003 /* DocumentTitleMatchClassifier.swift */; };
-		2A1BBBC87AC2367BD14610A9D10D285E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7538E66ABF00FC6BBD5F763373CDB27 /* ConstraintAttributes.swift */; };
-		2C0227E75B2DB892FA9FDB09A023D831 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B5734E307D2402F125191A04C3A47 /* HelperFunctions.swift */; };
-		2C06F2E972444D359754D21AC46BFFE2 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C713E13BE84BC08D0D663EAC62A74 /* ConstraintInsetTarget.swift */; };
-		350E98537BEE6C6DEC88FCDDB17BB0B0 /* NumWordsRulesClassifierFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211132925D49D3441F3E5119533CEA4E /* NumWordsRulesClassifierFilter.swift */; };
-		3BFC243AB9BD579969F0D5756560BCAA /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03AA1972570FAAC74FE935E8FF7FF2B /* Constraint.swift */; };
-		3E5285F4F36EAD77ECABBFB7F36BB1BB /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F405AD7A1E4361848B3DC12314A0 /* ConstraintView+Extensions.swift */; };
-		44FF838A7378779CC4CB6CF41640997B /* LargeBlockSameTagLevelToContentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03858A45E12B5A03B946E9C4490EC9FC /* LargeBlockSameTagLevelToContentFilter.swift */; };
-		465EF0D9586756E99D83C1ED10B07200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		4931A0D52921C13D6BE42385AB5F9A62 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE57BD1FE4CD423AA6F60993B962B72 /* CSS.swift */; };
-		4C7A676DAE95EEAC3787A75349F0862D /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BA6F978460C188A09ED47B77049A96 /* SnapKit-dummy.m */; };
-		4F781E5EECAB9FF6A91E151868206298 /* KeepLargestBlockBlockFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491153AA6A4BE2E4E7DC84DA5E7EDBAB /* KeepLargestBlockBlockFilter.swift */; };
+		1956E392D500F3CD899D39A5F805736D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E066869A95E00B949CBA4D2284C35F /* Typealiases.swift */; };
+		1AFB1E9136716C0B61D6C700FF1E60FD /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF299D2EEB87E7DD02630E87B96224 /* ConstraintLayoutGuide+Extensions.swift */; };
+		21AB1101BBE4D28D74ED4EDF0D59025A /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549471CD1FE3A1E1865DD172864918D3 /* ConstraintInsets.swift */; };
+		232B2F922E972D9F43D2EE15ACECE734 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD95F32F2E57D6B9100B77B93F013C /* ConstraintPriority.swift */; };
+		2A1BBBC87AC2367BD14610A9D10D285E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F460233F2A555D41511B6CCA66A124 /* ConstraintAttributes.swift */; };
+		2C06F2E972444D359754D21AC46BFFE2 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC377264B25FB0E67D150E37E87CD /* ConstraintInsetTarget.swift */; };
+		3BFC243AB9BD579969F0D5756560BCAA /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50380F281EC3EE769C85035CCEA77226 /* Constraint.swift */; };
+		3E5285F4F36EAD77ECABBFB7F36BB1BB /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9055CEA7890517265589BD23D73A49 /* ConstraintView+Extensions.swift */; };
+		4C7A676DAE95EEAC3787A75349F0862D /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E13B89FFD81AACB7530769CA05EEA26B /* SnapKit-dummy.m */; };
 		51443F140FD6F51FCD25CF00CA272684 /* Pods-RSSNewsReaderTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCD0506F44CED912BACFC8BEAE7D81C /* Pods-RSSNewsReaderTests-dummy.m */; };
-		51CD5887014967E77E58F5A163996454 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88167474D9E11228797BEFDA7A777134 /* ConstraintMaker.swift */; };
-		54CEE13D6CA521F3B3915AEB156841FF /* Untagger.h in Headers */ = {isa = PBXBuildFile; fileRef = D7E9E305D4685FB777179BA7626697D7 /* Untagger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5649DC8F3E785DB6136A408EAE854679 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80539F8CF2D3453C6F0B034F54457B0D /* libxmlParserOption.swift */; };
-		57B1876F2BE4168E5BFDB63D8CC849A0 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A585F0B72BAFE32C2293F6F3EECE2E /* ConstraintLayoutSupport.swift */; };
-		5854DF509E8A016B6235793D04083035 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0066EFDEF3BCFE792E7EFB6730F19 /* ConstraintConstantTarget.swift */; };
-		66C6101533AFA853DADE3D4596624677 /* Untagger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A86B25140C9B3DB235338A78930866 /* Untagger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69CCBEEDFCA6D743D80026568D961919 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF64EC5FB22CAB0CB75F291123F1DC99 /* ConstraintMakerExtendable.swift */; };
-		69E3A06BBDFDC7D06A9D4BDC4E895E73 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100580205895E46DB52DFC79F255EC5A /* ConstraintRelatableTarget.swift */; };
-		6E0EB9E7FAAEDBB7A73ECF3095F69C4A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D61A7BAE969C018DBA885A8B854C68 /* UILayoutSupport+Extensions.swift */; };
-		713679F510BE0BF69B3B198C0199C469 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99453856B5C8172F74A912A30B56BFD5 /* libxmlHTMLDocument.swift */; };
-		71DE9DC2FA583526AB4D1FD7F00C099C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89C0C3995227F4AE4527E132AAF30E /* ConstraintDirectionalInsetTarget.swift */; };
-		73FB4A1E6C5C142F47CD6119BD5AF9A7 /* BaseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEDB3DF439C3481BDA78667137D8764 /* BaseFilter.swift */; };
-		75E146C12D1287228A0B493E87CDE31F /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C4EB7CA4670AC0A43A2A0E4AE66D3 /* ConstraintMakerRelatable.swift */; };
-		77C9889055A3B32EA13A9616824DB0ED /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15108E26568343EBF8EE2E21BCA8EE42 /* ConstraintLayoutGuideDSL.swift */; };
+		51CD5887014967E77E58F5A163996454 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141BC33167429B9926FB24A17F01568C /* ConstraintMaker.swift */; };
+		57B1876F2BE4168E5BFDB63D8CC849A0 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D705690D879064ED84970813189D8D4 /* ConstraintLayoutSupport.swift */; };
+		5854DF509E8A016B6235793D04083035 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D990E0FED5B41C1F13AC6B08208A99B /* ConstraintConstantTarget.swift */; };
+		69CCBEEDFCA6D743D80026568D961919 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F10DE451FED17810D9B5C237324A5 /* ConstraintMakerExtendable.swift */; };
+		69E3A06BBDFDC7D06A9D4BDC4E895E73 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2975CA5A0D26BC84F3EE9912FEBDA795 /* ConstraintRelatableTarget.swift */; };
+		6E0EB9E7FAAEDBB7A73ECF3095F69C4A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9341666EAC154422A032092A7DC2D7 /* UILayoutSupport+Extensions.swift */; };
+		71DE9DC2FA583526AB4D1FD7F00C099C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D358AA1606C7B2CDC8555485807E9E /* ConstraintDirectionalInsetTarget.swift */; };
+		75E146C12D1287228A0B493E87CDE31F /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FB64349F5678CE1709979CF0DD952 /* ConstraintMakerRelatable.swift */; };
+		77C9889055A3B32EA13A9616824DB0ED /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BE9F3D55FDB29EF516F6D6B1B6BCA /* ConstraintLayoutGuideDSL.swift */; };
 		7BA5D080E1A7FD41DC2A8CEF9E88C5F8 /* Pods-RSSNewsReaderTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE8BF3877B887F1BA8B2A34F08BC452 /* Pods-RSSNewsReaderTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C1702076F3A31D8D2D45A4A9F09B266 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34C539CE8652002D17BBCDF97A47A2 /* ConstraintMakerEditable.swift */; };
-		7C4A12E7B36DCC125B36C748419F5021 /* Pods-RSSNewsReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 455438254CF0AB88EF18E01226653B49 /* Pods-RSSNewsReader-dummy.m */; };
-		7E40F814A473782DDA1560BB59F28400 /* TagActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3996DDCBEBADB9985A369B85CF2FEF7 /* TagActions.swift */; };
-		82513505D674D3D6CEDE25A8A6313B90 /* Pods-RSSNewsReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A1802A1718B4069A76E875FDB76A2D5 /* Pods-RSSNewsReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8277256ADEC3C4DCF79957D1CA681A9A /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E12C929061FF05D11A552B5CD75D6A5 /* ConstraintDSL.swift */; };
-		828269EAAB4C7EBBF4E8F7CA1E3DF962 /* BlockProximityFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F33AB89A1B4675D4B647E6BC188A4 /* BlockProximityFusion.swift */; };
-		84A7CD50F0CFA6EC058608A7ED23B1F4 /* ExpandTitleToContentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66AFB65FCB5B409810DE385190A99FD /* ExpandTitleToContentFilter.swift */; };
-		8705BBF0D428BF0AE1B554A377ECC540 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AEE17533C0D327DCF54D37D30F2FA /* ConstraintOffsetTarget.swift */; };
-		8BF288846522DB550FE69B6EC3FEB7B7 /* TerminatingBlocksFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1676DE8D178B6679BEA27331F9903640 /* TerminatingBlocksFinder.swift */; };
-		98A80A975711A029440E5197142990E9 /* Kanna.h in Headers */ = {isa = PBXBuildFile; fileRef = 10710D67D9E642897857B8651E38CE96 /* Kanna.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99B5296A5EDECE0557B9DA53D9E19CA1 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36611B01104EE1221CB41B057C6083FE /* ConstraintItem.swift */; };
-		9B09968922C73D50040C6EEF57890D6E /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1EB10E5D88FD58FF32FD78F96A10EA /* ConstraintConfig.swift */; };
-		9F1523B4EDB43ABF65ADB49E3CDB823F /* Kanna-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B5046B09637D18AE09BA1FCA051B2 /* Kanna-dummy.m */; };
-		A270CD9EC3C541FE86E65AEDCEF500CF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7B98DB62050831209CE9BA77F61D14 /* ConstraintLayoutGuide.swift */; };
-		A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF686ED5FE420132ADC0BB5E9983E245 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC35C9341C4BB156BB26FDD237EE3721 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377B564914E4489C65004CD129AED67 /* ConstraintDirectionalInsets.swift */; };
-		B599696DFEF6B2A5ECF528F4E5BB1846 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A3FF3CDD441E47D9AFB80343FD5D4 /* ConstraintDescription.swift */; };
-		B780B272106411CBE258BB60FFC45410 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D54E670E75739F4831CB2EF0A786D8 /* Debugging.swift */; };
-		BECA67DFB5E0984DFAEFCB775C31972E /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2238DE7090D9974C2707176D5AF3A /* ConstraintView.swift */; };
-		C412F27D75AFC0DF0F0289DBB270931C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF174FF5EF98622B8319CA89B16F850 /* ConstraintMakerFinalizable.swift */; };
-		C414C055E9CD3328226A5404D384EB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		C9BE9617EFABC5E589FADF6F81B08EEE /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E233A834C7DB13C02968D6EE632364 /* Kanna.swift */; };
-		C9C72F44533DCB869D1108F2866EE015 /* Untagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8406AFA2AF8DB5D19BC856122E4577A /* Untagger.swift */; };
-		CADF01DBF0244C983F4FA94037493EAE /* UntaggerHTMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED0B1F6CEE2B57F1B32412CB6EAA78B /* UntaggerHTMLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE62FEABA57B2B53EABF8C7DCCC6B2C4 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A2624A7751677222513A47070122B /* ConstraintRelation.swift */; };
-		D467260A32F493711751EB5CD6D2CDF2 /* TextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817BFACF39549110D4002FA5FDE14193 /* TextBlock.swift */; };
-		D4697DC40F3B059E4A0867838CA1814E /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76054F2AE4D61C173D8F88F0277734AA /* ConstraintMultiplierTarget.swift */; };
-		D9C8F14DDEDDAC1DA91131E3B7D00C25 /* IgnoreBlocksAfterContentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB81320B815ECBBF094B5078156DCBE /* IgnoreBlocksAfterContentFilter.swift */; };
-		E2508F61AF3901CDE14D104FF76E2DC4 /* ListAtEndFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036B77047D6FAD3E0FB521EA8F55288 /* ListAtEndFilter.swift */; };
-		E4320678968068FF0F39685200E1548D /* UntaggerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514CFA16AE6F1716D59D59574069DF66 /* UntaggerDocument.swift */; };
-		E8F2429683B3015CBD39CE883770BCA7 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7E5452370E65550D8CE2CC35BB7EF7 /* ConstraintPriorityTarget.swift */; };
-		E9A970BC24EA15832F248EA020072746 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F943414A42CFCF2C95ACE252725D099C /* LayoutConstraintItem.swift */; };
-		EB1726F5E0D0EEBA20E4528B1E37A8FA /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B97ABFCFB0E7EB97CC7409D91A6F0 /* ConstraintViewDSL.swift */; };
-		EC33DD6EFB5A6494B059FD762316B939 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036042659F1730916524D932E3D25FB5 /* Deprecated.swift */; };
-		EE60E2EC41B630420643CF0258B0C207 /* UntaggerHTMLParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BD8651E53F454BD1583DB3D1DDF25B4 /* UntaggerHTMLParserDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EE909C7C786140109051BC9562EEC7C8 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8DBC2CB031D7D49A34E43065460DE /* ConstraintMakerPriortizable.swift */; };
-		F436C771C484ADDC13C9B1F88F051E56 /* UnicodeTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB68D18352456FB71D0FA3DAA52C58 /* UnicodeTokenizer.swift */; };
-		FD53B3395BE1294D7BD4154850C2CC34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7C1702076F3A31D8D2D45A4A9F09B266 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3B0B200350EAC8F42EF635FF31BD1 /* ConstraintMakerEditable.swift */; };
+		8277256ADEC3C4DCF79957D1CA681A9A /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE00ECC24C5CC6DC938204FF42AD0E5 /* ConstraintDSL.swift */; };
+		8705BBF0D428BF0AE1B554A377ECC540 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B200BD964F52F6693D4168248B8645 /* ConstraintOffsetTarget.swift */; };
+		99B5296A5EDECE0557B9DA53D9E19CA1 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AFC560A8B414B467174737DBC891A /* ConstraintItem.swift */; };
+		9B09968922C73D50040C6EEF57890D6E /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E41DBB680A3A2ECDDD2210311B230 /* ConstraintConfig.swift */; };
+		A270CD9EC3C541FE86E65AEDCEF500CF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5188AE61F0E667CD9E7ED28CDD61C /* ConstraintLayoutGuide.swift */; };
+		A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0116B84A6773B75FCBFCB479E740F0F3 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC35C9341C4BB156BB26FDD237EE3721 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91164BE769DA144776663FBF46785561 /* ConstraintDirectionalInsets.swift */; };
+		B599696DFEF6B2A5ECF528F4E5BB1846 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D9F6F4E2364DFAF158E04AF5D5EAA /* ConstraintDescription.swift */; };
+		B780B272106411CBE258BB60FFC45410 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2FAA2F6B073D1B64B8635F4E3E6 /* Debugging.swift */; };
+		BECA67DFB5E0984DFAEFCB775C31972E /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E99894F75F00A281BE6A32FBDE495 /* ConstraintView.swift */; };
+		C04C02C24B0B14B218ED0BF1B26A45E2 /* Pods-RSSNewsReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A1802A1718B4069A76E875FDB76A2D5 /* Pods-RSSNewsReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32EE143B5BE4AF961B2216A1AD46A7B /* Pods-RSSNewsReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 455438254CF0AB88EF18E01226653B49 /* Pods-RSSNewsReader-dummy.m */; };
+		C412F27D75AFC0DF0F0289DBB270931C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02329E74D733C03BF6BAE1F564481 /* ConstraintMakerFinalizable.swift */; };
+		C53F55BB6A5ACE1671162C44BBD94CC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		CE62FEABA57B2B53EABF8C7DCCC6B2C4 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25479F58B67AA43E092C7B156C1B5C1B /* ConstraintRelation.swift */; };
+		D4697DC40F3B059E4A0867838CA1814E /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB9BB47A2175181386A432C07253AE /* ConstraintMultiplierTarget.swift */; };
+		E8F2429683B3015CBD39CE883770BCA7 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716AD15FADF38A93170E034F2BCE457 /* ConstraintPriorityTarget.swift */; };
+		E9A970BC24EA15832F248EA020072746 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C01543F3BCEDEE51ABAA696513D0B /* LayoutConstraintItem.swift */; };
+		EB1726F5E0D0EEBA20E4528B1E37A8FA /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56006AA49A060CA2830F32CD6F394823 /* ConstraintViewDSL.swift */; };
+		EE909C7C786140109051BC9562EEC7C8 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A53CAF547D71AEFABE49D91B4E6816 /* ConstraintMakerPriortizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		384358584DD766CE872FA9ABB3F0DC1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
-		};
 		5E4FB25FF95004E19417FED7C18D7575 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -104,133 +62,81 @@
 			remoteGlobalIDString = 6E227B8F6477F35F73C8CA2004F8B621;
 			remoteInfo = "Pods-RSSNewsReader";
 		};
-		85C0B9FE372D4BBA49A5072B9FC859EA /* PBXContainerItemProxy */ = {
+		86138F1FE34FBAF5AFDAD6B09DAAD76A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 93AC747EDE1EE56F89BBF405C1D67027;
-			remoteInfo = Kanna;
-		};
-		873D8654B2827F4844779FC691E18D18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E5BA08A7CD15F091A6A16F296B767254;
-			remoteInfo = Untagger;
+			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
+			remoteInfo = SnapKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		036042659F1730916524D932E3D25FB5 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/Kanna/Deprecated.swift; sourceTree = "<group>"; };
-		03858A45E12B5A03B946E9C4490EC9FC /* LargeBlockSameTagLevelToContentFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LargeBlockSameTagLevelToContentFilter.swift; path = Untagger/Filters/LargeBlockSameTagLevelToContentFilter.swift; sourceTree = "<group>"; };
-		08D54E670E75739F4831CB2EF0A786D8 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
-		09B03DAF8677EF9681127081DC81F24A /* Pods_RSSNewsReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSNewsReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0116B84A6773B75FCBFCB479E740F0F3 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
+		09B03DAF8677EF9681127081DC81F24A /* Pods_RSSNewsReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RSSNewsReaderTests.framework; path = "Pods-RSSNewsReaderTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09BF299D2EEB87E7DD02630E87B96224 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		0BCD0506F44CED912BACFC8BEAE7D81C /* Pods-RSSNewsReaderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RSSNewsReaderTests-dummy.m"; sourceTree = "<group>"; };
-		0DF174FF5EF98622B8319CA89B16F850 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		100580205895E46DB52DFC79F255EC5A /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		10710D67D9E642897857B8651E38CE96 /* Kanna.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kanna.h; path = Sources/Kanna/Kanna.h; sourceTree = "<group>"; };
-		13B14E4817943BF735726A91B4C96003 /* DocumentTitleMatchClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DocumentTitleMatchClassifier.swift; path = Untagger/Filters/DocumentTitleMatchClassifier.swift; sourceTree = "<group>"; };
-		15108E26568343EBF8EE2E21BCA8EE42 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		1676DE8D178B6679BEA27331F9903640 /* TerminatingBlocksFinder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TerminatingBlocksFinder.swift; path = Untagger/Filters/TerminatingBlocksFinder.swift; sourceTree = "<group>"; };
-		18B34B8B88D9F66FF8AC36BF47231EA7 /* Kanna-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kanna-Info.plist"; sourceTree = "<group>"; };
-		1BD8651E53F454BD1583DB3D1DDF25B4 /* UntaggerHTMLParserDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UntaggerHTMLParserDelegate.h; path = Untagger/Parser/UntaggerHTMLParserDelegate.h; sourceTree = "<group>"; };
-		1D2465A16B412970AB1966261F81204F /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
-		2036B77047D6FAD3E0FB521EA8F55288 /* ListAtEndFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListAtEndFilter.swift; path = Untagger/Filters/ListAtEndFilter.swift; sourceTree = "<group>"; };
-		211132925D49D3441F3E5119533CEA4E /* NumWordsRulesClassifierFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NumWordsRulesClassifierFilter.swift; path = Untagger/Filters/NumWordsRulesClassifierFilter.swift; sourceTree = "<group>"; };
-		23BA6F978460C188A09ED47B77049A96 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
+		11D02329E74D733C03BF6BAE1F564481 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		13F460233F2A555D41511B6CCA66A124 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		141BC33167429B9926FB24A17F01568C /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		2466248720CD691BFE382766AD35476B /* Pods-RSSNewsReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RSSNewsReader.modulemap"; sourceTree = "<group>"; };
-		26A585F0B72BAFE32C2293F6F3EECE2E /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		28ABD93471354C8FB334AE67B00652AD /* Kanna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kanna.debug.xcconfig; sourceTree = "<group>"; };
-		2A1A014F040E3A14741422FCBD99D89C /* Pods_RSSNewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSNewsReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B34C539CE8652002D17BBCDF97A47A2 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		250E41DBB680A3A2ECDDD2210311B230 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		25479F58B67AA43E092C7B156C1B5C1B /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
+		2975CA5A0D26BC84F3EE9912FEBDA795 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		2A1A014F040E3A14741422FCBD99D89C /* Pods_RSSNewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RSSNewsReader.framework; path = "Pods-RSSNewsReader.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE6CD3BB1199AB160CD01BE19165B84 /* Pods-RSSNewsReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSSNewsReader.debug.xcconfig"; sourceTree = "<group>"; };
-		2E12C929061FF05D11A552B5CD75D6A5 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		36611B01104EE1221CB41B057C6083FE /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		3EA922F9B70178D64EE578C60F4DD23B /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4056C44FE9B2453F524984062BAB4395 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
+		391A6F8B42D2CD885F8F3C4CE6859439 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
+		3D705690D879064ED84970813189D8D4 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		455438254CF0AB88EF18E01226653B49 /* Pods-RSSNewsReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RSSNewsReader-dummy.m"; sourceTree = "<group>"; };
-		46F2238DE7090D9974C2707176D5AF3A /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		491153AA6A4BE2E4E7DC84DA5E7EDBAB /* KeepLargestBlockBlockFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeepLargestBlockBlockFilter.swift; path = Untagger/Filters/KeepLargestBlockBlockFilter.swift; sourceTree = "<group>"; };
-		4DA7D717189C9ABAB2A8FE309946A662 /* Kanna-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-prefix.pch"; sourceTree = "<group>"; };
-		4ED0B1F6CEE2B57F1B32412CB6EAA78B /* UntaggerHTMLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UntaggerHTMLParser.h; path = Untagger/Parser/UntaggerHTMLParser.h; sourceTree = "<group>"; };
-		513601A34A71EFC4EE97290A8FAA1FDC /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
-		514CFA16AE6F1716D59D59574069DF66 /* UntaggerDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UntaggerDocument.swift; path = Untagger/UntaggerDocument.swift; sourceTree = "<group>"; };
-		52BB68D18352456FB71D0FA3DAA52C58 /* UnicodeTokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnicodeTokenizer.swift; path = Untagger/UnicodeTokenizer.swift; sourceTree = "<group>"; };
-		530C95EAA5C6ACE281F64CD2F07A3439 /* Untagger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Untagger-dummy.m"; sourceTree = "<group>"; };
-		5462D045A6496CA79F61972850595624 /* Kanna.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kanna.modulemap; sourceTree = "<group>"; };
-		573D01CC1752966745A6C1AADF014562 /* Untagger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Untagger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58005D7F7EF8A334420E9EC5EB3AD45E /* Untagger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Untagger-Info.plist"; sourceTree = "<group>"; };
-		59A86B25140C9B3DB235338A78930866 /* Untagger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Untagger-umbrella.h"; sourceTree = "<group>"; };
-		5A846FD1981AFF47C2680D4F02F80D0C /* Untagger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Untagger-prefix.pch"; sourceTree = "<group>"; };
-		5C2A28A611C867AA865C341DBA954AAD /* Untagger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Untagger.modulemap; sourceTree = "<group>"; };
-		618C4EB7CA4670AC0A43A2A0E4AE66D3 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		464C01543F3BCEDEE51ABAA696513D0B /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		474AFC560A8B414B467174737DBC891A /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
+		47B200BD964F52F6693D4168248B8645 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		50380F281EC3EE769C85035CCEA77226 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		549471CD1FE3A1E1865DD172864918D3 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
+		56006AA49A060CA2830F32CD6F394823 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		66C5188AE61F0E667CD9E7ED28CDD61C /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		6A1802A1718B4069A76E875FDB76A2D5 /* Pods-RSSNewsReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RSSNewsReader-umbrella.h"; sourceTree = "<group>"; };
-		6C7BCE03CD95BCA79828CF9CC85D9BCC /* TrailingHeadlineToUntaggerFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrailingHeadlineToUntaggerFilter.swift; path = Untagger/Filters/TrailingHeadlineToUntaggerFilter.swift; sourceTree = "<group>"; };
-		6DEDB3DF439C3481BDA78667137D8764 /* BaseFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseFilter.swift; path = Untagger/Filters/BaseFilter.swift; sourceTree = "<group>"; };
-		71CBCEF31B21D315360E8621DC891661 /* Untagger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Untagger.debug.xcconfig; sourceTree = "<group>"; };
-		720988A550F438405EEE8A68C8ADE127 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
-		76054F2AE4D61C173D8F88F0277734AA /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
-		7825C65884150E137DC1C65F4763D5FD /* Kanna-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-umbrella.h"; sourceTree = "<group>"; };
-		782DEC9C851A7A3AE74CC41692D08CCF /* Untagger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Untagger.release.xcconfig; sourceTree = "<group>"; };
-		7C89C0C3995227F4AE4527E132AAF30E /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
-		80539F8CF2D3453C6F0B034F54457B0D /* libxmlParserOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = Sources/Kanna/libxmlParserOption.swift; sourceTree = "<group>"; };
-		817BFACF39549110D4002FA5FDE14193 /* TextBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextBlock.swift; path = Untagger/TextBlock.swift; sourceTree = "<group>"; };
-		842A3FF3CDD441E47D9AFB80343FD5D4 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		8476E0447207C2A0F3C86336CBE4BB0A /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		88167474D9E11228797BEFDA7A777134 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
-		8A7E5452370E65550D8CE2CC35BB7EF7 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		8F2F33AB89A1B4675D4B647E6BC188A4 /* BlockProximityFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockProximityFusion.swift; path = Untagger/Filters/BlockProximityFusion.swift; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99453856B5C8172F74A912A30B56BFD5 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = Sources/Kanna/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0F8DBC2CB031D7D49A34E43065460DE /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
+		6A9341666EAC154422A032092A7DC2D7 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		6D990E0FED5B41C1F13AC6B08208A99B /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		724FB64349F5678CE1709979CF0DD952 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		7889131C1139F96BBDA94CEE2E694763 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		7AE00ECC24C5CC6DC938204FF42AD0E5 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
+		7C21E0C93A1141A1E2EB51575500E27D /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
+		7C2EC377264B25FB0E67D150E37E87CD /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		91164BE769DA144776663FBF46785561 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
+		91A53CAF547D71AEFABE49D91B4E6816 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
+		9716AD15FADF38A93170E034F2BCE457 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1CD432F32277BB93DEAADA626ECEC5B /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		A3A541035467BFA49C7FF97CB97DE241 /* Pods-RSSNewsReader-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RSSNewsReader-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A452F405AD7A1E4361848B3DC12314A0 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		A52B97ABFCFB0E7EB97CC7409D91A6F0 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		A8406AFA2AF8DB5D19BC856122E4577A /* Untagger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Untagger.swift; path = Untagger/Untagger.swift; sourceTree = "<group>"; };
-		AA7967FE55FF311BE486AB844E1FA8EA /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = Sources/Kanna/libxmlHTMLNode.swift; sourceTree = "<group>"; };
-		AB47990F997191A953D89EBCD245A400 /* UntaggerBlockFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UntaggerBlockFilter.swift; path = Untagger/Filters/UntaggerBlockFilter.swift; sourceTree = "<group>"; };
+		A51E99894F75F00A281BE6A32FBDE495 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
+		A7D358AA1606C7B2CDC8555485807E9E /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		ABAF0C78A8CFDB7C0A7BD01DFF4C6806 /* Pods-RSSNewsReaderTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RSSNewsReaderTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ADE57BD1FE4CD423AA6F60993B962B72 /* CSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = Sources/Kanna/CSS.swift; sourceTree = "<group>"; };
 		B0951584D3DC1F640A46B9FEBAD8E145 /* Pods-RSSNewsReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSSNewsReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B2D61A7BAE969C018DBA885A8B854C68 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		B4EA335FE1583B97743985CC4AEA1F30 /* Pods-RSSNewsReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSSNewsReaderTests.release.xcconfig"; sourceTree = "<group>"; };
 		B7F1D6B8538EEC3FF2A9216675D726B7 /* Pods-RSSNewsReaderTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSSNewsReaderTests-Info.plist"; sourceTree = "<group>"; };
-		B8E233A834C7DB13C02968D6EE632364 /* Kanna.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kanna.swift; path = Sources/Kanna/Kanna.swift; sourceTree = "<group>"; };
-		BA0C713E13BE84BC08D0D663EAC62A74 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 		BDE8E99251F359934AF762D37C77731B /* Pods-RSSNewsReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSSNewsReader.release.xcconfig"; sourceTree = "<group>"; };
-		BF1EB10E5D88FD58FF32FD78F96A10EA /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		BF4AEE17533C0D327DCF54D37D30F2FA /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		C03AA1972570FAAC74FE935E8FF7FF2B /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		C18926A162C69886F2D1FEC0176563C0 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
+		BE0BE9F3D55FDB29EF516F6D6B1B6BCA /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		C2B9AC2DD438CF917514E2BB3DB126C2 /* Pods-RSSNewsReader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSSNewsReader-Info.plist"; sourceTree = "<group>"; };
-		C3996DDCBEBADB9985A369B85CF2FEF7 /* TagActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TagActions.swift; path = Untagger/TagActions.swift; sourceTree = "<group>"; };
 		C49B1ADB235E9549BCB89F223E36E8BC /* Pods-RSSNewsReader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSSNewsReader-acknowledgements.plist"; sourceTree = "<group>"; };
-		C7538E66ABF00FC6BBD5F763373CDB27 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		CB6B5046B09637D18AE09BA1FCA051B2 /* Kanna-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kanna-dummy.m"; sourceTree = "<group>"; };
-		CBB81320B815ECBBF094B5078156DCBE /* IgnoreBlocksAfterContentFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoreBlocksAfterContentFilter.swift; path = Untagger/Filters/IgnoreBlocksAfterContentFilter.swift; sourceTree = "<group>"; };
-		CD2C4E528B3A5A5287632660FBEE6BF4 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
-		CF686ED5FE420132ADC0BB5E9983E245 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		CF6B5734E307D2402F125191A04C3A47 /* HelperFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = Untagger/HelperFunctions.swift; sourceTree = "<group>"; };
+		C4A46A8054577838D49C60142EB88B13 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
+		CB1D9F6F4E2364DFAF158E04AF5D5EAA /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		D038D2FAA2F6B073D1B64B8635F4E3E6 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		D4BDEE9AD019734D577B69E9FDC17A1C /* Pods-RSSNewsReaderTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSSNewsReaderTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D66AFB65FCB5B409810DE385190A99FD /* ExpandTitleToContentFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandTitleToContentFilter.swift; path = Untagger/Filters/ExpandTitleToContentFilter.swift; sourceTree = "<group>"; };
-		D7E9E305D4685FB777179BA7626697D7 /* Untagger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Untagger.h; path = Untagger/Untagger.h; sourceTree = "<group>"; };
-		DB35D003C047351191AD4162F288B122 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
-		DB7B98DB62050831209CE9BA77F61D14 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		DCB436023549A9B1AA773F353D74F001 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
-		E2104C433E7EC37FA8A6FEEB12BC6B77 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		E35184245F4BA55C2195C2C22416D972 /* UntaggerHTMLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UntaggerHTMLParser.m; path = Untagger/Parser/UntaggerHTMLParser.m; sourceTree = "<group>"; };
-		E5D0066EFDEF3BCFE792E7EFB6730F19 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		D4E066869A95E00B949CBA4D2284C35F /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
+		E13B89FFD81AACB7530769CA05EEA26B /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
+		E14A09DC3AD8CA84464FEC37F0FC99D1 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		E2C3B0B200350EAC8F42EF635FF31BD1 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		E43F10DE451FED17810D9B5C237324A5 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		E5DFFFB43829B319E9011E4EE2D24A2D /* Pods-RSSNewsReaderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RSSNewsReaderTests.modulemap"; sourceTree = "<group>"; };
-		E84B78E56518F3ED6F7EC463E6AAB216 /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
-		E963A0E0CEEF8D6D28EC9B868568CC14 /* Kanna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kanna.release.xcconfig; sourceTree = "<group>"; };
 		ECE8BF3877B887F1BA8B2A34F08BC452 /* Pods-RSSNewsReaderTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RSSNewsReaderTests-umbrella.h"; sourceTree = "<group>"; };
-		EF64EC5FB22CAB0CB75F291123F1DC99 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		EE9055CEA7890517265589BD23D73A49 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		F0BD95F32F2E57D6B9100B77B93F013C /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
 		F284EC03869A1A2E9EF38624B0F27F64 /* Pods-RSSNewsReader-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSSNewsReader-frameworks.sh"; sourceTree = "<group>"; };
-		F377B564914E4489C65004CD129AED67 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
-		F943414A42CFCF2C95ACE252725D099C /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		FC8A2624A7751677222513A47070122B /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
+		F44C5B72775F6AF0891BF331F32FE10D /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		F7AB9BB47A2175181386A432C07253AE /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,27 +156,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD040212932C464BD48E25437FBFD03C /* Frameworks */ = {
+		95DD9CAEBD714504C215A1C850ED168F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C414C055E9CD3328226A5404D384EB0D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1F5EE68142A8AA6A865BE906E2C89FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				465EF0D9586756E99D83C1ED10B07200 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDF25FC1DC0F06AECF714FA913DC79A2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD53B3395BE1294D7BD4154850C2CC34 /* Foundation.framework in Frameworks */,
+				C53F55BB6A5ACE1671162C44BBD94CC4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,103 +183,64 @@
 			path = "Target Support Files/Pods-RSSNewsReaderTests";
 			sourceTree = "<group>";
 		};
-		33EECE9D6500AB37EC0A6185FE19245B /* Support Files */ = {
+		7F02E3862C6E84203E8324D9D0088797 /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
-				DCB436023549A9B1AA773F353D74F001 /* SnapKit.modulemap */,
-				23BA6F978460C188A09ED47B77049A96 /* SnapKit-dummy.m */,
-				513601A34A71EFC4EE97290A8FAA1FDC /* SnapKit-Info.plist */,
-				E2104C433E7EC37FA8A6FEEB12BC6B77 /* SnapKit-prefix.pch */,
-				CF686ED5FE420132ADC0BB5E9983E245 /* SnapKit-umbrella.h */,
-				720988A550F438405EEE8A68C8ADE127 /* SnapKit.debug.xcconfig */,
-				E84B78E56518F3ED6F7EC463E6AAB216 /* SnapKit.release.xcconfig */,
+				50380F281EC3EE769C85035CCEA77226 /* Constraint.swift */,
+				13F460233F2A555D41511B6CCA66A124 /* ConstraintAttributes.swift */,
+				250E41DBB680A3A2ECDDD2210311B230 /* ConstraintConfig.swift */,
+				6D990E0FED5B41C1F13AC6B08208A99B /* ConstraintConstantTarget.swift */,
+				CB1D9F6F4E2364DFAF158E04AF5D5EAA /* ConstraintDescription.swift */,
+				91164BE769DA144776663FBF46785561 /* ConstraintDirectionalInsets.swift */,
+				A7D358AA1606C7B2CDC8555485807E9E /* ConstraintDirectionalInsetTarget.swift */,
+				7AE00ECC24C5CC6DC938204FF42AD0E5 /* ConstraintDSL.swift */,
+				549471CD1FE3A1E1865DD172864918D3 /* ConstraintInsets.swift */,
+				7C2EC377264B25FB0E67D150E37E87CD /* ConstraintInsetTarget.swift */,
+				474AFC560A8B414B467174737DBC891A /* ConstraintItem.swift */,
+				66C5188AE61F0E667CD9E7ED28CDD61C /* ConstraintLayoutGuide.swift */,
+				09BF299D2EEB87E7DD02630E87B96224 /* ConstraintLayoutGuide+Extensions.swift */,
+				BE0BE9F3D55FDB29EF516F6D6B1B6BCA /* ConstraintLayoutGuideDSL.swift */,
+				3D705690D879064ED84970813189D8D4 /* ConstraintLayoutSupport.swift */,
+				C4A46A8054577838D49C60142EB88B13 /* ConstraintLayoutSupportDSL.swift */,
+				141BC33167429B9926FB24A17F01568C /* ConstraintMaker.swift */,
+				E2C3B0B200350EAC8F42EF635FF31BD1 /* ConstraintMakerEditable.swift */,
+				E43F10DE451FED17810D9B5C237324A5 /* ConstraintMakerExtendable.swift */,
+				11D02329E74D733C03BF6BAE1F564481 /* ConstraintMakerFinalizable.swift */,
+				91A53CAF547D71AEFABE49D91B4E6816 /* ConstraintMakerPriortizable.swift */,
+				724FB64349F5678CE1709979CF0DD952 /* ConstraintMakerRelatable.swift */,
+				F7AB9BB47A2175181386A432C07253AE /* ConstraintMultiplierTarget.swift */,
+				47B200BD964F52F6693D4168248B8645 /* ConstraintOffsetTarget.swift */,
+				F0BD95F32F2E57D6B9100B77B93F013C /* ConstraintPriority.swift */,
+				9716AD15FADF38A93170E034F2BCE457 /* ConstraintPriorityTarget.swift */,
+				2975CA5A0D26BC84F3EE9912FEBDA795 /* ConstraintRelatableTarget.swift */,
+				25479F58B67AA43E092C7B156C1B5C1B /* ConstraintRelation.swift */,
+				A51E99894F75F00A281BE6A32FBDE495 /* ConstraintView.swift */,
+				EE9055CEA7890517265589BD23D73A49 /* ConstraintView+Extensions.swift */,
+				56006AA49A060CA2830F32CD6F394823 /* ConstraintViewDSL.swift */,
+				D038D2FAA2F6B073D1B64B8635F4E3E6 /* Debugging.swift */,
+				F44C5B72775F6AF0891BF331F32FE10D /* LayoutConstraint.swift */,
+				464C01543F3BCEDEE51ABAA696513D0B /* LayoutConstraintItem.swift */,
+				D4E066869A95E00B949CBA4D2284C35F /* Typealiases.swift */,
+				6A9341666EAC154422A032092A7DC2D7 /* UILayoutSupport+Extensions.swift */,
+				843EFF0C650682C304D518A9092EE9FD /* Support Files */,
+			);
+			name = SnapKit;
+			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		843EFF0C650682C304D518A9092EE9FD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7889131C1139F96BBDA94CEE2E694763 /* SnapKit.modulemap */,
+				E13B89FFD81AACB7530769CA05EEA26B /* SnapKit-dummy.m */,
+				391A6F8B42D2CD885F8F3C4CE6859439 /* SnapKit-Info.plist */,
+				E14A09DC3AD8CA84464FEC37F0FC99D1 /* SnapKit-prefix.pch */,
+				0116B84A6773B75FCBFCB479E740F0F3 /* SnapKit-umbrella.h */,
+				7C21E0C93A1141A1E2EB51575500E27D /* SnapKit.debug.xcconfig */,
+				A1CD432F32277BB93DEAADA626ECEC5B /* SnapKit.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SnapKit";
-			sourceTree = "<group>";
-		};
-		4602D24F5E067278518EEFAB93DB7947 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FE3A29C46AA3F72C9F9A89231500D04E /* Kanna */,
-				A53FC313A89FAC739F32B954ABB25608 /* SnapKit */,
-				84912012D2C4566A118CD41CF2292E4A /* Untagger */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		84912012D2C4566A118CD41CF2292E4A /* Untagger */ = {
-			isa = PBXGroup;
-			children = (
-				6DEDB3DF439C3481BDA78667137D8764 /* BaseFilter.swift */,
-				8F2F33AB89A1B4675D4B647E6BC188A4 /* BlockProximityFusion.swift */,
-				13B14E4817943BF735726A91B4C96003 /* DocumentTitleMatchClassifier.swift */,
-				D66AFB65FCB5B409810DE385190A99FD /* ExpandTitleToContentFilter.swift */,
-				CF6B5734E307D2402F125191A04C3A47 /* HelperFunctions.swift */,
-				CBB81320B815ECBBF094B5078156DCBE /* IgnoreBlocksAfterContentFilter.swift */,
-				491153AA6A4BE2E4E7DC84DA5E7EDBAB /* KeepLargestBlockBlockFilter.swift */,
-				03858A45E12B5A03B946E9C4490EC9FC /* LargeBlockSameTagLevelToContentFilter.swift */,
-				2036B77047D6FAD3E0FB521EA8F55288 /* ListAtEndFilter.swift */,
-				211132925D49D3441F3E5119533CEA4E /* NumWordsRulesClassifierFilter.swift */,
-				C3996DDCBEBADB9985A369B85CF2FEF7 /* TagActions.swift */,
-				1676DE8D178B6679BEA27331F9903640 /* TerminatingBlocksFinder.swift */,
-				817BFACF39549110D4002FA5FDE14193 /* TextBlock.swift */,
-				6C7BCE03CD95BCA79828CF9CC85D9BCC /* TrailingHeadlineToUntaggerFilter.swift */,
-				52BB68D18352456FB71D0FA3DAA52C58 /* UnicodeTokenizer.swift */,
-				D7E9E305D4685FB777179BA7626697D7 /* Untagger.h */,
-				A8406AFA2AF8DB5D19BC856122E4577A /* Untagger.swift */,
-				AB47990F997191A953D89EBCD245A400 /* UntaggerBlockFilter.swift */,
-				514CFA16AE6F1716D59D59574069DF66 /* UntaggerDocument.swift */,
-				4ED0B1F6CEE2B57F1B32412CB6EAA78B /* UntaggerHTMLParser.h */,
-				E35184245F4BA55C2195C2C22416D972 /* UntaggerHTMLParser.m */,
-				1BD8651E53F454BD1583DB3D1DDF25B4 /* UntaggerHTMLParserDelegate.h */,
-				C955E4CC049231344E80B81D007C88F2 /* Support Files */,
-			);
-			path = Untagger;
-			sourceTree = "<group>";
-		};
-		A53FC313A89FAC739F32B954ABB25608 /* SnapKit */ = {
-			isa = PBXGroup;
-			children = (
-				C03AA1972570FAAC74FE935E8FF7FF2B /* Constraint.swift */,
-				C7538E66ABF00FC6BBD5F763373CDB27 /* ConstraintAttributes.swift */,
-				BF1EB10E5D88FD58FF32FD78F96A10EA /* ConstraintConfig.swift */,
-				E5D0066EFDEF3BCFE792E7EFB6730F19 /* ConstraintConstantTarget.swift */,
-				842A3FF3CDD441E47D9AFB80343FD5D4 /* ConstraintDescription.swift */,
-				F377B564914E4489C65004CD129AED67 /* ConstraintDirectionalInsets.swift */,
-				7C89C0C3995227F4AE4527E132AAF30E /* ConstraintDirectionalInsetTarget.swift */,
-				2E12C929061FF05D11A552B5CD75D6A5 /* ConstraintDSL.swift */,
-				8476E0447207C2A0F3C86336CBE4BB0A /* ConstraintInsets.swift */,
-				BA0C713E13BE84BC08D0D663EAC62A74 /* ConstraintInsetTarget.swift */,
-				36611B01104EE1221CB41B057C6083FE /* ConstraintItem.swift */,
-				DB7B98DB62050831209CE9BA77F61D14 /* ConstraintLayoutGuide.swift */,
-				CD2C4E528B3A5A5287632660FBEE6BF4 /* ConstraintLayoutGuide+Extensions.swift */,
-				15108E26568343EBF8EE2E21BCA8EE42 /* ConstraintLayoutGuideDSL.swift */,
-				26A585F0B72BAFE32C2293F6F3EECE2E /* ConstraintLayoutSupport.swift */,
-				4056C44FE9B2453F524984062BAB4395 /* ConstraintLayoutSupportDSL.swift */,
-				88167474D9E11228797BEFDA7A777134 /* ConstraintMaker.swift */,
-				2B34C539CE8652002D17BBCDF97A47A2 /* ConstraintMakerEditable.swift */,
-				EF64EC5FB22CAB0CB75F291123F1DC99 /* ConstraintMakerExtendable.swift */,
-				0DF174FF5EF98622B8319CA89B16F850 /* ConstraintMakerFinalizable.swift */,
-				A0F8DBC2CB031D7D49A34E43065460DE /* ConstraintMakerPriortizable.swift */,
-				618C4EB7CA4670AC0A43A2A0E4AE66D3 /* ConstraintMakerRelatable.swift */,
-				76054F2AE4D61C173D8F88F0277734AA /* ConstraintMultiplierTarget.swift */,
-				BF4AEE17533C0D327DCF54D37D30F2FA /* ConstraintOffsetTarget.swift */,
-				DB35D003C047351191AD4162F288B122 /* ConstraintPriority.swift */,
-				8A7E5452370E65550D8CE2CC35BB7EF7 /* ConstraintPriorityTarget.swift */,
-				100580205895E46DB52DFC79F255EC5A /* ConstraintRelatableTarget.swift */,
-				FC8A2624A7751677222513A47070122B /* ConstraintRelation.swift */,
-				46F2238DE7090D9974C2707176D5AF3A /* ConstraintView.swift */,
-				A452F405AD7A1E4361848B3DC12314A0 /* ConstraintView+Extensions.swift */,
-				A52B97ABFCFB0E7EB97CC7409D91A6F0 /* ConstraintViewDSL.swift */,
-				08D54E670E75739F4831CB2EF0A786D8 /* Debugging.swift */,
-				1D2465A16B412970AB1966261F81204F /* LayoutConstraint.swift */,
-				F943414A42CFCF2C95ACE252725D099C /* LayoutConstraintItem.swift */,
-				C18926A162C69886F2D1FEC0176563C0 /* Typealiases.swift */,
-				B2D61A7BAE969C018DBA885A8B854C68 /* UILayoutSupport+Extensions.swift */,
-				33EECE9D6500AB37EC0A6185FE19245B /* Support Files */,
-			);
-			path = SnapKit;
 			sourceTree = "<group>";
 		};
 		B182E5846CA47C2AAED03F9E1414CC38 /* Targets Support Files */ = {
@@ -399,6 +250,14 @@
 				0460B58BB6DCA346B58DFAFE027B4626 /* Pods-RSSNewsReaderTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BA22F08D059965C9A09F78196176CEDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F02E3862C6E84203E8324D9D0088797 /* SnapKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BD37ABB1CAB09898879B82F2A9004754 /* Pods-RSSNewsReader */ = {
@@ -426,28 +285,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C955E4CC049231344E80B81D007C88F2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5C2A28A611C867AA865C341DBA954AAD /* Untagger.modulemap */,
-				530C95EAA5C6ACE281F64CD2F07A3439 /* Untagger-dummy.m */,
-				58005D7F7EF8A334420E9EC5EB3AD45E /* Untagger-Info.plist */,
-				5A846FD1981AFF47C2680D4F02F80D0C /* Untagger-prefix.pch */,
-				59A86B25140C9B3DB235338A78930866 /* Untagger-umbrella.h */,
-				71CBCEF31B21D315360E8621DC891661 /* Untagger.debug.xcconfig */,
-				782DEC9C851A7A3AE74CC41692D08CCF /* Untagger.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Untagger";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				4602D24F5E067278518EEFAB93DB7947 /* Pods */,
-				FA144DE9C640C6E60B025C0ABA86B1BA /* Products */,
+				BA22F08D059965C9A09F78196176CEDB /* Pods */,
+				FDB827C76B4BBFDE28EF4C44FC4654D9 /* Products */,
 				B182E5846CA47C2AAED03F9E1414CC38 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -460,51 +304,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D79CFB5BD71AE8C6C461228AA9C3B223 /* Support Files */ = {
+		FDB827C76B4BBFDE28EF4C44FC4654D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5462D045A6496CA79F61972850595624 /* Kanna.modulemap */,
-				CB6B5046B09637D18AE09BA1FCA051B2 /* Kanna-dummy.m */,
-				18B34B8B88D9F66FF8AC36BF47231EA7 /* Kanna-Info.plist */,
-				4DA7D717189C9ABAB2A8FE309946A662 /* Kanna-prefix.pch */,
-				7825C65884150E137DC1C65F4763D5FD /* Kanna-umbrella.h */,
-				28ABD93471354C8FB334AE67B00652AD /* Kanna.debug.xcconfig */,
-				E963A0E0CEEF8D6D28EC9B868568CC14 /* Kanna.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Kanna";
-			sourceTree = "<group>";
-		};
-		FA144DE9C640C6E60B025C0ABA86B1BA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3EA922F9B70178D64EE578C60F4DD23B /* Kanna.framework */,
 				2A1A014F040E3A14741422FCBD99D89C /* Pods_RSSNewsReader.framework */,
 				09B03DAF8677EF9681127081DC81F24A /* Pods_RSSNewsReaderTests.framework */,
 				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
-				573D01CC1752966745A6C1AADF014562 /* Untagger.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FE3A29C46AA3F72C9F9A89231500D04E /* Kanna */ = {
-			isa = PBXGroup;
-			children = (
-				ADE57BD1FE4CD423AA6F60993B962B72 /* CSS.swift */,
-				036042659F1730916524D932E3D25FB5 /* Deprecated.swift */,
-				10710D67D9E642897857B8651E38CE96 /* Kanna.h */,
-				B8E233A834C7DB13C02968D6EE632364 /* Kanna.swift */,
-				99453856B5C8172F74A912A30B56BFD5 /* libxmlHTMLDocument.swift */,
-				AA7967FE55FF311BE486AB844E1FA8EA /* libxmlHTMLNode.swift */,
-				80539F8CF2D3453C6F0B034F54457B0D /* libxmlParserOption.swift */,
-				D79CFB5BD71AE8C6C461228AA9C3B223 /* Support Files */,
-			);
-			path = Kanna;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		61C39288A00457F684B05C2A6A305DD2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04C02C24B0B14B218ED0BF1B26A45E2 /* Pods-RSSNewsReader-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		693A94375C41C76922CD4182DDF79B28 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,34 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80F80977BE9C53EC1337C12EC4B25F1C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82513505D674D3D6CEDE25A8A6313B90 /* Pods-RSSNewsReader-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9683084C4FD970476CFB1628D4563B3F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66C6101533AFA853DADE3D4596624677 /* Untagger-umbrella.h in Headers */,
-				54CEE13D6CA521F3B3915AEB156841FF /* Untagger.h in Headers */,
-				CADF01DBF0244C983F4FA94037493EAE /* UntaggerHTMLParser.h in Headers */,
-				EE60E2EC41B630420643CF0258B0C207 /* UntaggerHTMLParserDelegate.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E051C2FED2B76294071BFA50D9FA719D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F5E8CC0E12AED9DEF1FA149713B3D29 /* Kanna-umbrella.h in Headers */,
-				98A80A975711A029440E5197142990E9 /* Kanna.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,59 +364,21 @@
 		};
 		6E227B8F6477F35F73C8CA2004F8B621 /* Pods-RSSNewsReader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0367D192F4670693F6FF735E5D9AB4C0 /* Build configuration list for PBXNativeTarget "Pods-RSSNewsReader" */;
+			buildConfigurationList = 00A9FA853D884384AF1EAEAA5365AED3 /* Build configuration list for PBXNativeTarget "Pods-RSSNewsReader" */;
 			buildPhases = (
-				80F80977BE9C53EC1337C12EC4B25F1C /* Headers */,
-				8C71B3EF93F22F3485354185A5C1685F /* Sources */,
-				FDF25FC1DC0F06AECF714FA913DC79A2 /* Frameworks */,
-				BD80F70E1F9138007DA38AB88CC83213 /* Resources */,
+				61C39288A00457F684B05C2A6A305DD2 /* Headers */,
+				EA09567640A6A0789BFD4F2A3CF72EB9 /* Sources */,
+				95DD9CAEBD714504C215A1C850ED168F /* Frameworks */,
+				B80DEA53993DC616811DD1FE1A96AE5A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DD25469EF4DDE50C82E6222DF5B93C2A /* PBXTargetDependency */,
-				F0068DF0FA7E7E0663E96E91DC0C9285 /* PBXTargetDependency */,
-				6B884BA84F8AB2150B7CDC7047A55B4F /* PBXTargetDependency */,
+				69AB2DDC877F5AB484838A3F362A8488 /* PBXTargetDependency */,
 			);
 			name = "Pods-RSSNewsReader";
 			productName = "Pods-RSSNewsReader";
 			productReference = 2A1A014F040E3A14741422FCBD99D89C /* Pods_RSSNewsReader.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		93AC747EDE1EE56F89BBF405C1D67027 /* Kanna */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8A4AEBE015FDE4C158608D0B493CB29F /* Build configuration list for PBXNativeTarget "Kanna" */;
-			buildPhases = (
-				E051C2FED2B76294071BFA50D9FA719D /* Headers */,
-				16CE5D8FE9C68C5D927D695CD44D7F84 /* Sources */,
-				BD040212932C464BD48E25437FBFD03C /* Frameworks */,
-				D20FACCE86A71BB5A35B83189D2F40FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Kanna;
-			productName = Kanna;
-			productReference = 3EA922F9B70178D64EE578C60F4DD23B /* Kanna.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E5BA08A7CD15F091A6A16F296B767254 /* Untagger */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12482231385B389E8E0395801B0F6136 /* Build configuration list for PBXNativeTarget "Untagger" */;
-			buildPhases = (
-				9683084C4FD970476CFB1628D4563B3F /* Headers */,
-				1F267B84E60288DB67159F14431C675C /* Sources */,
-				F1F5EE68142A8AA6A865BE906E2C89FE /* Frameworks */,
-				3861CE348CBD2B2F98E23B073E1E5FD4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Untagger;
-			productName = Untagger;
-			productReference = 573D01CC1752966745A6C1AADF014562 /* Untagger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F1755D2EA9D61611E0180E93B71E5A5D /* Pods-RSSNewsReaderTests */ = {
@@ -654,11 +408,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					E5BA08A7CD15F091A6A16F296B767254 = {
-						LastSwiftMigration = 1130;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -669,27 +418,18 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = FA144DE9C640C6E60B025C0ABA86B1BA /* Products */;
+			productRefGroup = FDB827C76B4BBFDE28EF4C44FC4654D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93AC747EDE1EE56F89BBF405C1D67027 /* Kanna */,
 				6E227B8F6477F35F73C8CA2004F8B621 /* Pods-RSSNewsReader */,
 				F1755D2EA9D61611E0180E93B71E5A5D /* Pods-RSSNewsReaderTests */,
 				19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */,
-				E5BA08A7CD15F091A6A16F296B767254 /* Untagger */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3861CE348CBD2B2F98E23B073E1E5FD4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5287989507B065798F72C03847D74F4C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -704,14 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD80F70E1F9138007DA38AB88CC83213 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D20FACCE86A71BB5A35B83189D2F40FA /* Resources */ = {
+		B80DEA53993DC616811DD1FE1A96AE5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -721,47 +454,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16CE5D8FE9C68C5D927D695CD44D7F84 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4931A0D52921C13D6BE42385AB5F9A62 /* CSS.swift in Sources */,
-				EC33DD6EFB5A6494B059FD762316B939 /* Deprecated.swift in Sources */,
-				9F1523B4EDB43ABF65ADB49E3CDB823F /* Kanna-dummy.m in Sources */,
-				C9BE9617EFABC5E589FADF6F81B08EEE /* Kanna.swift in Sources */,
-				713679F510BE0BF69B3B198C0199C469 /* libxmlHTMLDocument.swift in Sources */,
-				183ED56ED5A304D31BF95FB4FF100E09 /* libxmlHTMLNode.swift in Sources */,
-				5649DC8F3E785DB6136A408EAE854679 /* libxmlParserOption.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1F267B84E60288DB67159F14431C675C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				73FB4A1E6C5C142F47CD6119BD5AF9A7 /* BaseFilter.swift in Sources */,
-				828269EAAB4C7EBBF4E8F7CA1E3DF962 /* BlockProximityFusion.swift in Sources */,
-				280ADD0C934C01BDF0EB880D6B4C2F05 /* DocumentTitleMatchClassifier.swift in Sources */,
-				84A7CD50F0CFA6EC058608A7ED23B1F4 /* ExpandTitleToContentFilter.swift in Sources */,
-				2C0227E75B2DB892FA9FDB09A023D831 /* HelperFunctions.swift in Sources */,
-				D9C8F14DDEDDAC1DA91131E3B7D00C25 /* IgnoreBlocksAfterContentFilter.swift in Sources */,
-				4F781E5EECAB9FF6A91E151868206298 /* KeepLargestBlockBlockFilter.swift in Sources */,
-				44FF838A7378779CC4CB6CF41640997B /* LargeBlockSameTagLevelToContentFilter.swift in Sources */,
-				E2508F61AF3901CDE14D104FF76E2DC4 /* ListAtEndFilter.swift in Sources */,
-				350E98537BEE6C6DEC88FCDDB17BB0B0 /* NumWordsRulesClassifierFilter.swift in Sources */,
-				7E40F814A473782DDA1560BB59F28400 /* TagActions.swift in Sources */,
-				8BF288846522DB550FE69B6EC3FEB7B7 /* TerminatingBlocksFinder.swift in Sources */,
-				D467260A32F493711751EB5CD6D2CDF2 /* TextBlock.swift in Sources */,
-				0555461B5FA96E6404D5CAE775CBB2E9 /* TrailingHeadlineToUntaggerFilter.swift in Sources */,
-				F436C771C484ADDC13C9B1F88F051E56 /* UnicodeTokenizer.swift in Sources */,
-				0E0F0CA1D1994ED21FE387A57215629F /* Untagger-dummy.m in Sources */,
-				C9C72F44533DCB869D1108F2866EE015 /* Untagger.swift in Sources */,
-				0B3A3FF53E64982C8A8EFEE695C69627 /* UntaggerBlockFilter.swift in Sources */,
-				E4320678968068FF0F39685200E1548D /* UntaggerDocument.swift in Sources */,
-				0FE9F52E65EC8F49E753EF6DE3297B93 /* UntaggerHTMLParser.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25900D729B69277EC9EA1447E5087B10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -814,22 +506,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C71B3EF93F22F3485354185A5C1685F /* Sources */ = {
+		EA09567640A6A0789BFD4F2A3CF72EB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C4A12E7B36DCC125B36C748419F5021 /* Pods-RSSNewsReader-dummy.m in Sources */,
+				C32EE143B5BE4AF961B2216A1AD46A7B /* Pods-RSSNewsReader-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6B884BA84F8AB2150B7CDC7047A55B4F /* PBXTargetDependency */ = {
+		69AB2DDC877F5AB484838A3F362A8488 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Untagger;
-			target = E5BA08A7CD15F091A6A16F296B767254 /* Untagger */;
-			targetProxy = 873D8654B2827F4844779FC691E18D18 /* PBXContainerItemProxy */;
+			name = SnapKit;
+			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
+			targetProxy = 86138F1FE34FBAF5AFDAD6B09DAAD76A /* PBXContainerItemProxy */;
 		};
 		AE4C56CEA276B802DFD96125B19BC51A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -837,57 +529,10 @@
 			target = 6E227B8F6477F35F73C8CA2004F8B621 /* Pods-RSSNewsReader */;
 			targetProxy = 5E4FB25FF95004E19417FED7C18D7575 /* PBXContainerItemProxy */;
 		};
-		DD25469EF4DDE50C82E6222DF5B93C2A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Kanna;
-			target = 93AC747EDE1EE56F89BBF405C1D67027 /* Kanna */;
-			targetProxy = 85C0B9FE372D4BBA49A5072B9FC859EA /* PBXContainerItemProxy */;
-		};
-		F0068DF0FA7E7E0663E96E91DC0C9285 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapKit;
-			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 384358584DD766CE872FA9ABB3F0DC1F /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A60012F7B818B1E570D4B25CEA7B316 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28ABD93471354C8FB334AE67B00652AD /* Kanna.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Kanna/Kanna-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
-				PRODUCT_MODULE_NAME = Kanna;
-				PRODUCT_NAME = Kanna;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		101E6F2483DD5BEE993CD90999324F19 /* Release */ = {
+		084E90FE59586AB77E53B6F13CF64215 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BDE8E99251F359934AF762D37C77731B /* Pods-RSSNewsReader.release.xcconfig */;
 			buildSettings = {
@@ -1024,42 +669,6 @@
 			};
 			name = Debug;
 		};
-		43BFEF3F3F11270661F000FAC8160F55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 782DEC9C851A7A3AE74CC41692D08CCF /* Untagger.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Untagger/Untagger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Untagger/Untagger-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Untagger/Untagger.modulemap";
-				PRODUCT_MODULE_NAME = Untagger;
-				PRODUCT_NAME = Untagger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		6F1FA76E6D1C682B8FDA86B5E070BB02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4EA335FE1583B97743985CC4AEA1F30 /* Pods-RSSNewsReaderTests.release.xcconfig */;
@@ -1101,7 +710,7 @@
 		};
 		73B201A0641E8BDF892BA0B27E0AF833 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E84B78E56518F3ED6F7EC463E6AAB216 /* SnapKit.release.xcconfig */;
+			baseConfigurationReference = A1CD432F32277BB93DEAADA626ECEC5B /* SnapKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1136,7 +745,7 @@
 			};
 			name = Release;
 		};
-		C6F396511E82C9DAA2F107B3A4C58CB2 /* Debug */ = {
+		9A6DE67213FDAA34D0BE69DBC1BAB6BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BE6CD3BB1199AB160CD01BE19165B84 /* Pods-RSSNewsReader.debug.xcconfig */;
 			buildSettings = {
@@ -1173,77 +782,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		D9E195962645A1FAD897EBF36AAA5D87 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71CBCEF31B21D315360E8621DC891661 /* Untagger.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Untagger/Untagger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Untagger/Untagger-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Untagger/Untagger.modulemap";
-				PRODUCT_MODULE_NAME = Untagger;
-				PRODUCT_NAME = Untagger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DA7218D9A82DC00C8EC04E3A5B9F17D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E963A0E0CEEF8D6D28EC9B868568CC14 /* Kanna.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Kanna/Kanna-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
-				PRODUCT_MODULE_NAME = Kanna;
-				PRODUCT_NAME = Kanna;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1311,7 +849,7 @@
 		};
 		F93AF49C1CAF2486F9DC6AE9F85C0739 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 720988A550F438405EEE8A68C8ADE127 /* SnapKit.debug.xcconfig */;
+			baseConfigurationReference = 7C21E0C93A1141A1E2EB51575500E27D /* SnapKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1348,20 +886,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0367D192F4670693F6FF735E5D9AB4C0 /* Build configuration list for PBXNativeTarget "Pods-RSSNewsReader" */ = {
+		00A9FA853D884384AF1EAEAA5365AED3 /* Build configuration list for PBXNativeTarget "Pods-RSSNewsReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6F396511E82C9DAA2F107B3A4C58CB2 /* Debug */,
-				101E6F2483DD5BEE993CD90999324F19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		12482231385B389E8E0395801B0F6136 /* Build configuration list for PBXNativeTarget "Untagger" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9E195962645A1FAD897EBF36AAA5D87 /* Debug */,
-				43BFEF3F3F11270661F000FAC8160F55 /* Release */,
+				9A6DE67213FDAA34D0BE69DBC1BAB6BC /* Debug */,
+				084E90FE59586AB77E53B6F13CF64215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1380,15 +909,6 @@
 			buildConfigurations = (
 				F93AF49C1CAF2486F9DC6AE9F85C0739 /* Debug */,
 				73B201A0641E8BDF892BA0B27E0AF833 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8A4AEBE015FDE4C158608D0B493CB29F /* Build configuration list for PBXNativeTarget "Kanna" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A60012F7B818B1E570D4B25CEA7B316 /* Debug */,
-				DA7218D9A82DC00C8EC04E3A5B9F17D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

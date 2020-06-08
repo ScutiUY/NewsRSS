@@ -36,6 +36,7 @@ class NewsListTableViewCell: UITableViewCell {
         var label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.lineBreakMode = .byTruncatingTail
+        label.numberOfLines = 3
         return label
     }()
     
@@ -43,37 +44,10 @@ class NewsListTableViewCell: UITableViewCell {
         var label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13)
         label.lineBreakMode = .byTruncatingTail
-        label.numberOfLines = 2
+        label.numberOfLines = 3
         return label
     }()
-    
-    private let keywordLabel1: UIButton = {
-        var label = UIButton()
-        label.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        label.setTitleColor(.black, for: .normal)
-        label.contentEdgeInsets = UIEdgeInsets(top: 1, left: 5, bottom: 1, right: 5)
-        label.layer.borderWidth = 1
-        label.layer.cornerRadius = 10
-        return label
-    }()
-    private let keywordLabel2: UIButton = {
-        var label = UIButton()
-        label.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        label.setTitleColor(.black, for: .normal)
-        label.contentEdgeInsets = UIEdgeInsets(top: 1, left: 5, bottom: 1, right: 5)
-        label.layer.borderWidth = 1
-        label.layer.cornerRadius = 10
-        return label
-    }()
-    private let keywordLabel3: UIButton = {
-        var label = UIButton()
-        label.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        label.setTitleColor(.black, for: .normal)
-        label.contentEdgeInsets = UIEdgeInsets(top: 1, left: 5, bottom: 1, right: 5)
-        label.layer.borderWidth = 1
-        label.layer.cornerRadius = 10
-        return label
-    }()
+
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -104,12 +78,7 @@ class NewsListTableViewCell: UITableViewCell {
         
         
         stackView.addArrangedSubview(title)
-        stackView.addArrangedSubview(detailLabel)
-        stackView.addArrangedSubview(keywordsView)
-        
-        keywordsView.addSubview(keywordLabel1)
-        keywordsView.addSubview(keywordLabel2)
-        keywordsView.addSubview(keywordLabel3)
+        //stackView.addArrangedSubview(detailLabel)
         
         
         thumNail.snp.makeConstraints { (m) in
@@ -126,36 +95,19 @@ class NewsListTableViewCell: UITableViewCell {
             m.trailing.equalTo(contentView.safeAreaLayoutGuide.snp.trailing).offset(-5)
         }
         title.snp.makeConstraints { (m) in
-            m.height.equalTo(stackView.snp.height).multipliedBy(0.25)
+            m.height.equalTo(stackView.snp.height).multipliedBy(1)
         }
-        detailLabel.snp.makeConstraints { (m) in
-            m.height.equalTo(stackView.snp.height).multipliedBy(0.5)
-        }
-        keywordsView.snp.makeConstraints { (m) in
-            m.height.equalTo(stackView.snp.height).multipliedBy(0.25) 
-        }
+//        detailLabel.snp.makeConstraints { (m) in
+//            m.height.equalTo(stackView.snp.height).multipliedBy(0.7)
+//        }
 
-        keywordLabel1.snp.makeConstraints { (m) in
-            m.leading.equalTo(stackView.snp.leading)
-            m.centerY.equalTo(keywordsView.snp.centerY)
-        }
-        keywordLabel2.snp.makeConstraints { (m) in
-            m.leading.equalTo(keywordLabel1.snp.trailing).offset(5)
-            m.centerY.equalTo(keywordsView.snp.centerY)
-        }
-        keywordLabel3.snp.makeConstraints { (m) in
-            m.leading.equalTo(keywordLabel2.snp.trailing).offset(5)
-            m.centerY.equalTo(keywordsView.snp.centerY)
-        }
+        
         
     }
     func configureCell(model: Model) {
         title.text = model.title
         detailLabel.text = model.detail
         thumNail.image = model.thumbNail
-        keywordLabel1.setTitle(model.keywords?[0], for: .normal)
-        keywordLabel2.setTitle(model.keywords?[1], for: .normal)
-        keywordLabel3.setTitle(model.keywords?[2], for: .normal)
     }
     
 }

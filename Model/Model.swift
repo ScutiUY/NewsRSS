@@ -15,7 +15,6 @@ class Model: NSObject{
     var link: String
     var thumbNail: UIImage?
     var detail: String?
-    var keywords: [String]?
     var content: String?
     
     init(title: String, link: String){
@@ -24,5 +23,6 @@ class Model: NSObject{
     }
    
     static var newsData = [Model]()
+    static var tempData = [Model]()
 }
 

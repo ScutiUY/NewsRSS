@@ -15,11 +15,14 @@ class NewsListViewController: UIViewController {
         var tableView = UITableView()
         return tableView
     }()
+    lazy var refreshController: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.red
+        return refreshControl
+    }()
     
-    private var refreshController = UIRefreshControl()
     
     private let url = URL(string: "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko")
-    
     
     
     override func viewDidLoad() {
@@ -27,9 +30,10 @@ class NewsListViewController: UIViewController {
         
         setLayout()
         navigationSet()
-        tableViewSet()
-        activeIndicator()
         fetchData()
+        tableViewSet()
+        //activeIndicator()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -39,7 +43,6 @@ class NewsListViewController: UIViewController {
     }
     
     private func setLayout() {
-        
         view.addSubview(newsTableView)
         newsTableView.snp.makeConstraints { (m) in
             m.top.equalTo(view.snp.top)
@@ -56,20 +59,36 @@ class NewsListViewController: UIViewController {
         newsTableView.delegate = self
         newsTableView.dataSource = self
         newsTableView.register(NewsListTableViewCell.self, forCellReuseIdentifier: "NewsListTableViewCell")
-        newsTableView.refreshControl = refreshController
+        
+        if #available(iOS 10.0, *) {
+            newsTableView.refreshControl = refreshController
+        } else {
+            newsTableView.addSubview(refreshController)
+        }
+        
+     
+
         refreshController.addTarget(self, action: #selector(refresh), for: .valueChanged)
         refreshController.snp.makeConstraints { (m) in
             m.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             m.centerX.equalTo(view.snp.centerX)
         }
+        refreshController.attributedTitle = NSAttributedString(string: "refresh")
     }
+    
+    
+    
     private func fetchData() {
-        
-            let parser = Parser()
-            parser.parseFeed(url: self.url!)
-            NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
+        let parser = Parser()
+        parser.parseFeed(url: self.url!)
+        NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
+            
+                Model.tempData = Model.newsData
+                print("reloading 중")
                 self.newsTableView.reloadData()
-            }
+                self.refreshController.endRefreshing()
+            
+        }
     }
     
     private func activeIndicator() {
@@ -85,45 +104,44 @@ class NewsListViewController: UIViewController {
             activityIndicator.stopAnimating()
             alert.dismiss(animated: true, completion: nil)
         }
-        
     }
+    
     @objc func refresh() {
-            Model.newsData.removeAll()
-            fetchData()
-            refreshController.endRefreshing()
+        //self.activeIndicator()
+        Model.newsData.removeAll()
+        Parser.count = 0
+        fetchData()
     }
-   
     
 }
 extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count = 0
-        if Model.newsData.count > 0 {
-            count = Model.newsData.count
-        }
-        return count
+        return Model.tempData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = Model.newsData[indexPath.row]
+        print(Model.tempData.count)
+        let model = Model.tempData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListTableViewCell", for: indexPath) as? NewsListTableViewCell
         cell?.configureCell(model: model)
         return cell!
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let newsContentVC = UIStoryboard(name: "NewsContent", bundle: nil).instantiateViewController(withIdentifier: "NewsContent") as! NewsContentViewController
         newsContentVC.modalPresentationStyle = .overFullScreen
-        newsContentVC.url = Model.newsData[indexPath.row].link
-        newsContentVC.articleTitle = Model.newsData[indexPath.row].title
-        if let unwrpedKeywords = Model.newsData[indexPath.row].keywords{
-        newsContentVC.keywords = unwrpedKeywords
-        }
-        if let unwrapedContent = Model.newsData[indexPath.row].content {
-            newsContentVC.htmlStr = unwrapedContent
-        }
+        newsContentVC.url = Model.tempData[indexPath.row].link
+        newsContentVC.articleTitle = Model.tempData[indexPath.row].title
         self.navigationController?.pushViewController(newsContentVC, animated: true)
+    }
+}
+
+extension UIRefreshControl {
+    func refreshManually() {
+        beginRefreshing()
+        sendActions(for: .valueChanged)
     }
 }

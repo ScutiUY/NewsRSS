@@ -8,7 +8,6 @@
 
 import UIKit
 import SnapKit
-import Untagger
 class NewsContentViewController: UIViewController {
     
     private let webView: UIWebView = {
@@ -45,9 +44,11 @@ class NewsContentViewController: UIViewController {
     }
     
     func setURL(url: String) {
-        guard let baseURL = URL(string: url) else { return }
-        htmlStr = articleTitleLeft+articleTitle+articleTitleRight+keywordsLeft+" 키워드 : \(keywords[0]), \(keywords[1]), \(keywords[2])"+keywordsRight+htmlStr
-        webView.loadHTMLString(htmlStr, baseURL: baseURL)
+        guard URL(string: url) != nil else { return }
+        htmlStr = articleTitleLeft+articleTitle+articleTitleRight+keywordsLeft+keywordsRight+htmlStr
+        let request = URLRequest(url: URL(string:url)!)
+        webView.loadRequest(request)
+        //webView.loadHTMLString(htmlStr, baseURL: baseURL)
     }
     
     

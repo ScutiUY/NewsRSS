@@ -21,6 +21,7 @@
 		F07AA4B724222E4200F7EE15 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07AA4B624222E4200F7EE15 /* NewsListViewController.swift */; };
 		F07AA4B9242376C300F7EE15 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07AA4B8242376C300F7EE15 /* Model.swift */; };
 		F07AA4BB2424396400F7EE15 /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07AA4BA2424396400F7EE15 /* NewsListTableViewCell.swift */; };
+		F07F765B247BD24B0068337F /* TagTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F765A247BD24B0068337F /* TagTree.swift */; };
 		F0C81D232424D288002A2638 /* NewsContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C81D222424D288002A2638 /* NewsContent.storyboard */; };
 		F0EAC2F12428E77500403C2F /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EAC2F02428E77500403C2F /* Parser.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		F07AA4B624222E4200F7EE15 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		F07AA4B8242376C300F7EE15 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F07AA4BA2424396400F7EE15 /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
+		F07F765A247BD24B0068337F /* TagTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTree.swift; sourceTree = "<group>"; };
 		F0C81D222424D288002A2638 /* NewsContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsContent.storyboard; sourceTree = "<group>"; };
 		F0EAC2F02428E77500403C2F /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 				F07AA4B8242376C300F7EE15 /* Model.swift */,
 				F0EAC2F02428E77500403C2F /* Parser.swift */,
 				F05CA4642433ED81003DC9CE /* extension.swift */,
+				F07F765A247BD24B0068337F /* TagTree.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				F05CC0A224216FDF0089DA3A /* LaunchScreenViewController.swift in Sources */,
 				F07AA4BB2424396400F7EE15 /* NewsListTableViewCell.swift in Sources */,
 				F05CA4652433ED81003DC9CE /* extension.swift in Sources */,
+				F07F765B247BD24B0068337F /* TagTree.swift in Sources */,
 				F05CC09E24216FDF0089DA3A /* AppDelegate.swift in Sources */,
 				F0EAC2F12428E77500403C2F /* Parser.swift in Sources */,
 				F050B9602424D16A0004E086 /* NewsContentViewController.swift in Sources */,
@@ -437,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -491,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

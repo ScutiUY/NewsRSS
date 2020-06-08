@@ -1,4 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-RSSNewsReader/Pods-RSSNewsReader-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
-${BUILT_PRODUCTS_DIR}/Untagger/Untagger.framework

@@ -1,24 +1,16 @@
 PODS:
-  - Kanna (5.0.0)
   - SnapKit (5.0.1)
-  - Untagger (0.0.3)
 
 DEPENDENCIES:
-  - Kanna
   - SnapKit
-  - Untagger
 
 SPEC REPOS:
   trunk:
-    - Kanna
     - SnapKit
-    - Untagger
 
 SPEC CHECKSUMS:
-  Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  Untagger: f0c7d22d3f8c418dada1f0b13698834d3fa7f783
 
-PODFILE CHECKSUM: 77411d90bd27eeca4fa304c6e269cb4cf543dc1d
+PODFILE CHECKSUM: ad9a040bcb5b94cc2abfa4f4908c92c4111cda03
 
 COCOAPODS: 1.9.0
