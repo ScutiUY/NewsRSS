@@ -45,7 +45,7 @@ class NewsListViewController: UIViewController {
     private func setLayout() {
         view.addSubview(newsTableView)
         newsTableView.snp.makeConstraints { (m) in
-            m.top.equalTo(view.snp.top)
+            m.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             m.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             m.width.equalTo(view.snp.width)
         }

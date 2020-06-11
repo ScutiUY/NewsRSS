@@ -55,6 +55,7 @@ class Parser: NSObject {
             guard let data = data else { return }
             let html = self.incodingHTML(data)
             guard let html2String = html else { return }
+            print(html2String)
             model.detail = html2String
             if html2String.getArrayAfterRegex(text: "og:description\".+").isEmpty {
                 if !html2String.getArrayAfterRegex(text: "name=\"description\".+").isEmpty{
@@ -78,7 +79,8 @@ class Parser: NSObject {
                 image = UIImage(data: imageData)
                 DispatchQueue.main.async {
                     model.thumbNail = image
-                     NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
+                    
+                    NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
                 }
             }
             
