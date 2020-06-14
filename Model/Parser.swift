@@ -24,6 +24,7 @@ class Parser: NSObject {
     private var detaildata: [String: String] = [:]
     static var blank: Bool = false
     
+    
     func parseFeed (url: URL) {
         print("link파싱 시작")
         let request = URLRequest(url: url)
@@ -46,6 +47,8 @@ class Parser: NSObject {
         var imageURL = ""
         var image: UIImage?
         let url = URL(string: model.link)
+        var treeArr = [Tree]()
+        var rootNode = Tree("root")
         guard let reURL = url else {
             print("link 오류")
             return }
@@ -55,14 +58,33 @@ class Parser: NSObject {
             guard let data = data else { return }
             let html = self.incodingHTML(data)
             guard let html2String = html else { return }
-            print(html2String)
-            model.detail = html2String
+            
+            var newStr = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+            newStr = newStr.replacingOccurrences(of: ">", with: ">\n")
+            let arr = newStr.components(separatedBy: "\n")
+            arr.forEach{treeArr.append(Tree($0))}
+            
+            rootNode.initalizeDOM(rootNode: rootNode, treeArr: treeArr)
+            var contentStr = ""
+            var dic: [Tree:Int] = rootNode.BFS(currentNode: rootNode)
+            var newContent: Tree
+            
+            if dic.max{$0.value < $1.value} != nil {
+                var newContent = dic.max{$0.value < $1.value}!.key
+                rootNode.DFS(currentNode: newContent, &contentStr)
+                model.content = contentStr
+            } else if dic.max{$0.value < $1.value} == nil {
+                var newContent = rootNode
+                rootNode.DFS(currentNode: newContent, &contentStr)
+                model.content = contentStr
+            }
+            
+            
             if html2String.getArrayAfterRegex(text: "og:description\".+").isEmpty {
                 if !html2String.getArrayAfterRegex(text: "name=\"description\".+").isEmpty{
                     detail = html2String.getArrayAfterRegex(text: "name=\"description\".+")[0]
                     detail = self.getDescription(detail)
                     model.detail = detail
-                    
                 }
             } else if !html2String.getArrayAfterRegex(text: "og:description\".+").isEmpty {
                 detail = html2String.getArrayAfterRegex(text: "og:description\".+")[0]
@@ -86,8 +108,7 @@ class Parser: NSObject {
             
         }
         Parser.self.count+=1
-        print("타이틀과 카운트",model.title,Parser.count)
-        print("개별 파싱 성공")
+
         task.resume()
     }
     
@@ -112,7 +133,7 @@ class Parser: NSObject {
         reArr = arr.replacingOccurrences(of: "og:image\"", with: "").replacingOccurrences(of: "content=\"", with: "").replacingOccurrences(of: "\" />", with: "").replacingOccurrences(of: "\">", with: "").replacingOccurrences(of: "\"/>", with: "").trimmingCharacters(in: .whitespaces)
         return reArr
     }
-    
+        
 }
 
 extension Parser: XMLParserDelegate {
@@ -133,8 +154,6 @@ extension Parser: XMLParserDelegate {
                 let newModel = Model(title: detaildata["title"]!, link: detaildata["link"]!)
                 Model.newsData.append(newModel)
                 linkParse(model: newModel)
-                print("newsData 카운트",Model.newsData.count)
-                print(newModel.title)
             }
         }
         Parser.blank = false

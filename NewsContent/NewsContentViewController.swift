@@ -20,9 +20,6 @@ class NewsContentViewController: UIViewController {
     let articleTitleLeft = "<h2><span class=\"title\">"
     let articleTitleRight = "</span></h2>"
     var articleTitle = ""
-    var keywords = [""]
-    let keywordsLeft = "<h5><span class=\"keywords\">"
-    let keywordsRight = "</span></h5>"
     var url = ""
     var htmlStr = """
         
@@ -45,10 +42,8 @@ class NewsContentViewController: UIViewController {
     
     func setURL(url: String) {
         guard URL(string: url) != nil else { return }
-        htmlStr = articleTitleLeft+articleTitle+articleTitleRight+keywordsLeft+keywordsRight+htmlStr
-        let request = URLRequest(url: URL(string:url)!)
-        webView.loadRequest(request)
-        //webView.loadHTMLString(htmlStr, baseURL: baseURL)
+        //htmlStr = articleTitleLeft+articleTitle+articleTitleRight+htmlStr
+        webView.loadHTMLString(htmlStr, baseURL: nil)
     }
     
     

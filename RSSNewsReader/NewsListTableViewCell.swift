@@ -18,10 +18,6 @@ class NewsListTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    private let keywordsView: UIView = {
-        var view = UIView()
-        return view
-    }()
     
     private let thumNail: UIImageView = {
         var imageView = UIImageView()

@@ -84,7 +84,6 @@ class NewsListViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
             
                 Model.tempData = Model.newsData
-                print("reloading 중")
                 self.newsTableView.reloadData()
                 self.refreshController.endRefreshing()
             
@@ -120,7 +119,7 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(Model.tempData.count)
+        
         let model = Model.tempData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListTableViewCell", for: indexPath) as? NewsListTableViewCell
         cell?.configureCell(model: model)
@@ -135,6 +134,8 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         newsContentVC.modalPresentationStyle = .overFullScreen
         newsContentVC.url = Model.tempData[indexPath.row].link
         newsContentVC.articleTitle = Model.tempData[indexPath.row].title
+        
+        newsContentVC.htmlStr = Model.tempData[indexPath.row].content!.replacingOccurrences(of: "width:", with: "width:\(view.frame.width - 10)px;")
         self.navigationController?.pushViewController(newsContentVC, animated: true)
     }
 }
