@@ -13,6 +13,10 @@ class NewsContentViewController: UIViewController {
     private let webView: UIWebView = {
         var webView = UIWebView()
         webView.backgroundColor = .white
+        webView.allowsInlineMediaPlayback = true
+        webView.mediaPlaybackRequiresUserAction = false
+        webView.contentMode = .scaleToFill
+        webView.scalesPageToFit = false
         return webView
     }()
     
@@ -42,10 +46,36 @@ class NewsContentViewController: UIViewController {
     
     func setURL(url: String) {
         guard URL(string: url) != nil else { return }
-        //htmlStr = articleTitleLeft+articleTitle+articleTitleRight+htmlStr
-        webView.loadHTMLString(htmlStr, baseURL: nil)
+        print(htmlStr)
+        let size = """
+        <html lang=\"ja\">
+        <head>"
+        <meta charset=\"UTF-8\">
+        <style type=\"text/css\">
+        html{margin:0;padding:0;}
+        body {
+        margin: 0;
+        padding: 0;
+        font-size: 90%;
+        line-height: 1.6;
+        }
+        img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        }
+        </style>
+        </head>
+        \(htmlStr)
+        </html>
+        """
+        webView.loadHTMLString(articleTitleLeft+articleTitle+articleTitleRight+size, baseURL: nil)
     }
-    
     
 }
 

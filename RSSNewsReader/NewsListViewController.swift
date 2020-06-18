@@ -17,7 +17,7 @@ class NewsListViewController: UIViewController {
     }()
     lazy var refreshController: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = UIColor.red
+        refreshControl.attributedTitle = NSAttributedString(string: "refresh")
         return refreshControl
     }()
     
@@ -27,12 +27,12 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.extendedLayoutIncludesOpaqueBars = false
         setLayout()
         navigationSet()
         fetchData()
         tableViewSet()
-        //activeIndicator()
+        activeIndicator()
         
         // Do any additional setup after loading the view.
     }
@@ -45,7 +45,7 @@ class NewsListViewController: UIViewController {
     private func setLayout() {
         view.addSubview(newsTableView)
         newsTableView.snp.makeConstraints { (m) in
-            m.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            m.top.equalToSuperview()
             m.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             m.width.equalTo(view.snp.width)
         }
@@ -65,15 +65,12 @@ class NewsListViewController: UIViewController {
         } else {
             newsTableView.addSubview(refreshController)
         }
-        
-     
-
         refreshController.addTarget(self, action: #selector(refresh), for: .valueChanged)
         refreshController.snp.makeConstraints { (m) in
             m.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             m.centerX.equalTo(view.snp.centerX)
         }
-        refreshController.attributedTitle = NSAttributedString(string: "refresh")
+        
     }
     
     
@@ -82,15 +79,15 @@ class NewsListViewController: UIViewController {
         let parser = Parser()
         parser.parseFeed(url: self.url!)
         NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
-            
-                Model.tempData = Model.newsData
-                self.newsTableView.reloadData()
-                self.refreshController.endRefreshing()
-            
+            Model.tempData = Model.newsData
+            self.newsTableView.reloadData()
+            self.refreshController.endRefreshing()
         }
+        activeIndicator()
     }
     
     private func activeIndicator() {
+        
         let alert = UIAlertController(title: "로딩중", message: nil, preferredStyle: .alert)
         let activityIndicator = UIActivityIndicatorView(frame: alert.view.bounds)
         activityIndicator.autoresizingMask = [.flexibleWidth,.flexibleHeight]
@@ -99,14 +96,17 @@ class NewsListViewController: UIViewController {
         activityIndicator.isUserInteractionEnabled = false
         activityIndicator.startAnimating()
         self.present(alert, animated: true, completion: nil)
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
-            activityIndicator.stopAnimating()
-            alert.dismiss(animated: true, completion: nil)
+        NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
+            if Parser.count == Model.newsData.count && Model.newsData.count != 0{
+                activityIndicator.stopAnimating()
+                alert.dismiss(animated: true, completion: nil)
+            }
         }
+        
     }
     
     @objc func refresh() {
-        //self.activeIndicator()
+        
         Model.newsData.removeAll()
         Parser.count = 0
         fetchData()
@@ -134,8 +134,12 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         newsContentVC.modalPresentationStyle = .overFullScreen
         newsContentVC.url = Model.tempData[indexPath.row].link
         newsContentVC.articleTitle = Model.tempData[indexPath.row].title
-        
-        newsContentVC.htmlStr = Model.tempData[indexPath.row].content!.replacingOccurrences(of: "width:", with: "width:\(view.frame.width - 10)px;")
+        if Model.tempData[indexPath.row].content!.contains("<img") {
+            Model.tempData[indexPath.row].content! = Model.tempData[indexPath.row].content!.replacingOccurrences(of: "<img", with: "<img width=\"\(view.frame.width)\"")
+        } else if Model.tempData[indexPath.row].content!.contains("<img") {
+            Model.tempData[indexPath.row].content! = Model.tempData[indexPath.row].content!.replacingOccurrences(of: "style=", with: "style=\"width:\(view.frame.width);\"")
+        }
+        newsContentVC.htmlStr = Model.tempData[indexPath.row].content!
         self.navigationController?.pushViewController(newsContentVC, animated: true)
     }
 }
@@ -144,5 +148,12 @@ extension UIRefreshControl {
     func refreshManually() {
         beginRefreshing()
         sendActions(for: .valueChanged)
+    }
+}
+extension UIScrollView: UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0 {
+            scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: 0), animated: false)
+        }
     }
 }

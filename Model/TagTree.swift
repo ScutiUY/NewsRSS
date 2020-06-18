@@ -39,6 +39,8 @@ class Tree {
                     dic[node.parent!]!+=2
                 } else if dic[node.parent!] == nil {
                     dic[node.parent ?? Tree("toptre")] = 2
+                } else if node.value.contains("img") {
+                    node.value += "width = "
                 }
             } else if node.value.contains("<p") || node.value.contains("</p>") || node.value.contains("<br") || node.value.contains("<P") || node.value.contains("<P") || node.value.contains("<Br") {
                 if dic[node.parent!] != nil {

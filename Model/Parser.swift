@@ -11,6 +11,7 @@ import UIKit
 class Parser: NSObject {
     static var count = 0 {
         didSet {
+            print(Model.newsData.count, Parser.count)
             if count == Model.newsData.count {
                 DispatchQueue.main.async {
                     NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
@@ -18,6 +19,7 @@ class Parser: NSObject {
             }
         }
     }
+    static var text = ""
     static let parsingNoti = Notification.Name("finished parsing")
     private var currentElement: String = ""
     private var datalist: [[String:String]] = []
@@ -26,14 +28,14 @@ class Parser: NSObject {
     
     
     func parseFeed (url: URL) {
-        print("link파싱 시작")
+        
         let request = URLRequest(url: url)
         let urlSession = URLSession.shared
         let task = urlSession.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
             guard var data2String = String(data: data, encoding: .utf8) else { return }
             data2String = data2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "&lt;", with: "").replacingOccurrences(of: "&gt;", with: "")
-            print(data2String)
+            
             let parser = XMLParser(data: data2String.data(using: .utf8)!)
             parser.delegate = self
             parser.parse()
@@ -48,7 +50,7 @@ class Parser: NSObject {
         var image: UIImage?
         let url = URL(string: model.link)
         var treeArr = [Tree]()
-        var rootNode = Tree("root")
+        let rootNode = Tree("root")
         guard let reURL = url else {
             print("link 오류")
             return }
@@ -66,17 +68,19 @@ class Parser: NSObject {
             
             rootNode.initalizeDOM(rootNode: rootNode, treeArr: treeArr)
             var contentStr = ""
-            var dic: [Tree:Int] = rootNode.BFS(currentNode: rootNode)
-            var newContent: Tree
+            let dic: [Tree:Int] = rootNode.BFS(currentNode: rootNode)
             
-            if dic.max{$0.value < $1.value} != nil {
-                var newContent = dic.max{$0.value < $1.value}!.key
+            
+            if dic.max(by: {$0.value < $1.value}) != nil {
+                let newContent = dic.max{$0.value < $1.value}!.key
                 rootNode.DFS(currentNode: newContent, &contentStr)
                 model.content = contentStr
-            } else if dic.max{$0.value < $1.value} == nil {
-                var newContent = rootNode
+                Parser.self.count+=1
+            } else if dic.max(by: {$0.value < $1.value}) == nil {
+                let newContent = rootNode
                 rootNode.DFS(currentNode: newContent, &contentStr)
                 model.content = contentStr
+                Parser.self.count+=1
             }
             
             
@@ -107,7 +111,7 @@ class Parser: NSObject {
             }
             
         }
-        Parser.self.count+=1
+        
 
         task.resume()
     }
