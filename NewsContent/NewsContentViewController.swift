@@ -16,7 +16,7 @@ class NewsContentViewController: UIViewController {
         webView.allowsInlineMediaPlayback = true
         webView.mediaPlaybackRequiresUserAction = false
         webView.contentMode = .scaleToFill
-        webView.scalesPageToFit = false
+        webView.scalesPageToFit = true
         return webView
     }()
     
@@ -74,7 +74,7 @@ class NewsContentViewController: UIViewController {
         \(htmlStr)
         </html>
         """
-        webView.loadHTMLString(articleTitleLeft+articleTitle+articleTitleRight+size, baseURL: nil)
+        webView.loadHTMLString(articleTitleLeft+articleTitle+articleTitleRight+htmlStr, baseURL: nil)
     }
     
 }

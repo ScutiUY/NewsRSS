@@ -50,7 +50,7 @@ class Tree {
                 } else if node.value.contains("<div style") {
                     node.value = ""
                 } else if node.value.contains("style") {
-                    node.value.replacingOccurrences(of: "style", with: "")
+                    node.value = node.value.replacingOccurrences(of: "style", with: "")
                 }
             }
             
@@ -86,11 +86,7 @@ class Tree {
     }
 }
 
-extension Tree: CustomStringConvertible {
-    var description: String {
-        return self.value
-    }
-}
+
 
 extension Tree: Hashable {
     static func == (lhs: Tree, rhs: Tree) -> Bool {

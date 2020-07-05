@@ -96,7 +96,7 @@ class LaunchScreenViewController: UIViewController {
     }
     
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1.3, target: self, selector: #selector(exitLaunchScreen), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(exitLaunchScreen), userInfo: nil, repeats: false)
         
     }
     @objc func exitLaunchScreen() {

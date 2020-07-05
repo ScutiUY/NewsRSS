@@ -73,11 +73,8 @@ class NewsListViewController: UIViewController {
         
     }
     
-    
-    
     private func fetchData() {
-        let parser = Parser()
-        parser.parseFeed(url: self.url!)
+        Parser.shared.parseFeed(url: self.url!)
         NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
             Model.tempData = Model.newsData
             self.newsTableView.reloadData()
@@ -108,7 +105,7 @@ class NewsListViewController: UIViewController {
     @objc func refresh() {
         
         Model.newsData.removeAll()
-        Parser.count = 0
+        Parser.count = 0 // 로딩을 위한 수치
         fetchData()
     }
     

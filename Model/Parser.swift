@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 class Parser: NSObject {
+    static var shared = Parser()
     static var count = 0 {
         didSet {
             print(Model.newsData.count, Parser.count)
