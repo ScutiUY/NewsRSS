@@ -15,6 +15,7 @@ class NewsListViewController: UIViewController {
         var tableView = UITableView()
         return tableView
     }()
+    
     lazy var refreshController: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "refresh")
@@ -55,6 +56,7 @@ class NewsListViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .automatic
     }
+    
     private func tableViewSet(){
         newsTableView.delegate = self
         newsTableView.dataSource = self
@@ -126,6 +128,7 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let newsContentVC = UIStoryboard(name: "NewsContent", bundle: nil).instantiateViewController(withIdentifier: "NewsContent") as! NewsContentViewController
         newsContentVC.modalPresentationStyle = .overFullScreen

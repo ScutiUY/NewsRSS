@@ -20,7 +20,7 @@ class Parser: NSObject {
             }
         }
     }
-    static var text = ""
+    
     static let parsingNoti = Notification.Name("finished parsing")
     private var currentElement: String = ""
     private var datalist: [[String:String]] = []
@@ -60,7 +60,9 @@ class Parser: NSObject {
         let task = urlSession.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
             let html = self.incodingHTML(data)
-            guard let html2String = html else { return }
+            guard let html2String = html else {
+                fatalError("html 오류")
+            }
             
             var newStr = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
             newStr = newStr.replacingOccurrences(of: ">", with: ">\n")
@@ -95,7 +97,6 @@ class Parser: NSObject {
                 detail = html2String.getArrayAfterRegex(text: "og:description\".+")[0]
                 detail = self.getDescription(detail)
                 model.detail = detail
-                
             }
             
             if !html2String.getArrayAfterRegex(text: "og:image\".+").isEmpty {
@@ -112,20 +113,16 @@ class Parser: NSObject {
             }
             
         }
-        
-
         task.resume()
     }
     
     func incodingHTML(_ data: Data) -> String? {
         var html = String(data: data, encoding: .utf8)
-        if html == nil{
-            let encoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(0x0422))
-            html = String(data: data, encoding: encoding)
-            if html == nil {
-                html = String(decoding: data, as: UTF8.self)
-            }
-        }
+        guard html == nil else { return html }
+        let encoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(0x0422))
+        html = String(data: data, encoding: encoding)
+        guard html == nil else { return html }
+        html = String(decoding: data, as: UTF8.self)
         return html
     }
     func getDescription(_ arr: String) -> String {

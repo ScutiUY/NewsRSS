@@ -18,7 +18,6 @@ class NewsListTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    
     private let thumNail: UIImageView = {
         var imageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -54,16 +53,8 @@ class NewsListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setCellLayout()
-        // Initialization code
-    }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     
@@ -93,13 +84,8 @@ class NewsListTableViewCell: UITableViewCell {
         title.snp.makeConstraints { (m) in
             m.height.equalTo(stackView.snp.height).multipliedBy(1)
         }
-//        detailLabel.snp.makeConstraints { (m) in
-//            m.height.equalTo(stackView.snp.height).multipliedBy(0.7)
-//        }
-
-        
-        
     }
+    
     func configureCell(model: Model) {
         title.text = model.title
         detailLabel.text = model.detail

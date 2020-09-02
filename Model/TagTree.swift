@@ -13,6 +13,7 @@ class Tree {
     var childrens = [Tree]()
     var parent: Tree?
     var endTag: Bool?
+    
     init(_ value: String) {
         if value.contains("</div>") {
             self.endTag = true
@@ -21,10 +22,12 @@ class Tree {
         }
         self.value = value
     }
+    
     func addTree(child: Tree) {
         childrens.append(child)
         child.parent = self
     }
+    
     func BFS(currentNode: Tree) -> [Tree:Int] {
         var dic = [Tree:Int]()
         var queue = [Tree]()
@@ -42,7 +45,9 @@ class Tree {
                 } else if node.value.contains("img") {
                     node.value += "width = "
                 }
-            } else if node.value.contains("<p") || node.value.contains("</p>") || node.value.contains("<br") || node.value.contains("<P") || node.value.contains("<P") || node.value.contains("<Br") {
+            }
+
+            else if node.value.contains("<p") || node.value.contains("</p>") || node.value.contains("<br") || node.value.contains("<P") || node.value.contains("<P") || node.value.contains("<Br") {
                 if dic[node.parent!] != nil {
                     dic[node.parent!]!+=1
                 } else if dic[node.parent!] == nil {
@@ -61,7 +66,7 @@ class Tree {
         return dic
     }
     
-    func DFS(currentNode:Tree, _ newHTML:inout String) {
+    func DFS(currentNode: Tree, _ newHTML: inout String) {
         newHTML += currentNode.value
         for element in currentNode.childrens {
             DFS(currentNode: element, &newHTML)
@@ -97,5 +102,3 @@ extension Tree: Hashable {
         hasher.combine(value)
     }
 }
-
-
