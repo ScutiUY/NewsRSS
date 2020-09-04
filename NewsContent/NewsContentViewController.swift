@@ -21,8 +21,6 @@ class NewsContentViewController: UIViewController {
     }()
     
     private let spinner = UIActivityIndicatorView(style: .gray)
-    let articleTitleLeft = "<h2><span class=\"title\">"
-    let articleTitleRight = "</span></h2>"
     var articleTitle = ""
     var url = ""
     var htmlStr = """

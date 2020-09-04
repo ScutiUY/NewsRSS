@@ -12,7 +12,7 @@ class Parser: NSObject {
     static var shared = Parser()
     static var count = 0 {
         didSet {
-            print(Model.newsData.count, Parser.count)
+            //print(Model.newsData.count, Parser.count)
             if count == Model.newsData.count {
                 DispatchQueue.main.async {
                     NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
@@ -92,11 +92,15 @@ class Parser: NSObject {
             DispatchQueue.main.async {
                 model.thumbNail = UIImage(named: "No_Image")
             }
+            NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
         } else if !newStr.getArrayAfterRegex(text: "og:image.+").isEmpty {
-            DispatchQueue.main.async {
-                model.thumbNail = self.getImage(newStr.getArrayAfterRegex(text: "og:image.+")[0])
+            DispatchQueue.global(qos: .userInteractive).async {
+                DispatchQueue.main.async {
+                    model.thumbNail = self.getImage(newStr.getArrayAfterRegex(text: "og:image.+")[0])
+                }
                 NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
             }
+            
         }
     }
     func incodingHTML(_ data: Data) -> String? {
@@ -109,11 +113,17 @@ class Parser: NSObject {
         return html
     }
     func getImage(_ arr: String) -> UIImage {
-        print("jpg ",arr)
         guard arr.contains("http") else { return UIImage(named: "No_Image")!
         }
-        let imageURL = arr.getArrayAfterRegex(text: "http.+jpg")[0]
-        guard let urq = URL(string: imageURL) else {
+        var imageURL = arr.getArrayAfterRegex(text: "http.+\"")
+        if imageURL == [] {
+            imageURL = arr.getArrayAfterRegex(text: "http.+\'")
+        }
+        if imageURL == [] {
+            return UIImage(named: "No_Image")!
+        }
+        imageURL[0].removeLast()
+        guard let urq = URL(string: imageURL[0]) else {
             return UIImage(named: "No_Image")!
         }
         guard let imageData = try? Data(contentsOf: urq) else {
