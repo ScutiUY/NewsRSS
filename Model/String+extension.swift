@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 extension String {
     func getArrayAfterRegex(text: String) -> [String] {
         let regex = try? NSRegularExpression(pattern: text, options: .caseInsensitive)
@@ -18,6 +19,5 @@ extension String {
         } else {
             return [""]
         }
-        
     }
 }

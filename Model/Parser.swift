@@ -46,9 +46,7 @@ class Parser: NSObject {
     }
     
     func linkParse (model: Model) {
-        var detail: String = ""
-        var imageURL = ""
-        var image: UIImage?
+        var contentStr = ""
         let url = URL(string: model.link)
         var treeArr = [Tree]()
         let rootNode = Tree("root")
@@ -64,13 +62,12 @@ class Parser: NSObject {
                 fatalError("html 오류")
             }
             
-            var newStr = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-            newStr = newStr.replacingOccurrences(of: ">", with: ">\n")
+            let newStr = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: ">", with: ">\n").trimmingCharacters(in: .whitespacesAndNewlines)
             let arr = newStr.components(separatedBy: "\n")
             arr.forEach{treeArr.append(Tree($0))}
-            
+             
             rootNode.initalizeDOM(rootNode: rootNode, treeArr: treeArr)
-            var contentStr = ""
+            
             let dic: [Tree:Int] = rootNode.BFS(currentNode: rootNode)
             
             
@@ -85,37 +82,23 @@ class Parser: NSObject {
                 model.content = contentStr
                 Parser.self.count+=1
             }
-            
-            
-            if html2String.getArrayAfterRegex(text: "og:description\".+").isEmpty {
-                if !html2String.getArrayAfterRegex(text: "name=\"description\".+").isEmpty{
-                    detail = html2String.getArrayAfterRegex(text: "name=\"description\".+")[0]
-                    detail = self.getDescription(detail)
-                    model.detail = detail
-                }
-            } else if !html2String.getArrayAfterRegex(text: "og:description\".+").isEmpty {
-                detail = html2String.getArrayAfterRegex(text: "og:description\".+")[0]
-                detail = self.getDescription(detail)
-                model.detail = detail
-            }
-            
-            if !html2String.getArrayAfterRegex(text: "og:image\".+").isEmpty {
-                imageURL = self.getImage(html2String.getArrayAfterRegex(text: "og:image\".+")[0])
-                let ur = URL(string: imageURL)
-                guard let urq = ur else { return }
-                guard let imageData = try? Data(contentsOf: urq) else { return }
-                image = UIImage(data: imageData)
-                DispatchQueue.main.async {
-                    model.thumbNail = image
-                    
-                    NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
-                }
-            }
+            self.imageValidation(newStr: newStr, model: model)
             
         }
         task.resume()
     }
-    
+    func imageValidation(newStr: String, model: Model) {
+        if newStr.getArrayAfterRegex(text: "og:image.+").isEmpty {
+            DispatchQueue.main.async {
+                model.thumbNail = UIImage(named: "No_Image")
+            }
+        } else if !newStr.getArrayAfterRegex(text: "og:image.+").isEmpty {
+            DispatchQueue.main.async {
+                model.thumbNail = self.getImage(newStr.getArrayAfterRegex(text: "og:image.+")[0])
+                NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
+            }
+        }
+    }
     func incodingHTML(_ data: Data) -> String? {
         var html = String(data: data, encoding: .utf8)
         guard html == nil else { return html }
@@ -125,15 +108,18 @@ class Parser: NSObject {
         html = String(decoding: data, as: UTF8.self)
         return html
     }
-    func getDescription(_ arr: String) -> String {
-        var reArr = ""
-        reArr = arr.replacingOccurrences(of: "<meta", with: "").replacingOccurrences(of: "og:description\"", with: "").replacingOccurrences(of: "content=\"", with: "").replacingOccurrences(of: "&nbsp;", with: " ").replacingOccurrences(of: "&quot;", with: "\"").replacingOccurrences(of: "&#39;", with: "'").replacingOccurrences(of: "&#34;", with: "\"").replacingOccurrences(of: "\" />", with: "").replacingOccurrences(of: "name=", with: "").replacingOccurrences(of: "description\"", with: "").trimmingCharacters(in: .whitespaces)
-        return reArr
-    }
-    func getImage(_ arr: String) -> String {
-        var reArr = ""
-        reArr = arr.replacingOccurrences(of: "og:image\"", with: "").replacingOccurrences(of: "content=\"", with: "").replacingOccurrences(of: "\" />", with: "").replacingOccurrences(of: "\">", with: "").replacingOccurrences(of: "\"/>", with: "").trimmingCharacters(in: .whitespaces)
-        return reArr
+    func getImage(_ arr: String) -> UIImage {
+        print("jpg ",arr)
+        guard arr.contains("http") else { return UIImage(named: "No_Image")!
+        }
+        let imageURL = arr.getArrayAfterRegex(text: "http.+jpg")[0]
+        guard let urq = URL(string: imageURL) else {
+            return UIImage(named: "No_Image")!
+        }
+        guard let imageData = try? Data(contentsOf: urq) else {
+            return UIImage(named: "No_Image")!
+        }
+        return UIImage(data: imageData)!
     }
         
 }
