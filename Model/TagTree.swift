@@ -12,18 +12,18 @@ class Tree {
     var value = ""
     var childrens = [Tree]()
     var parent: Tree?
-    var endTag: Bool?
+    var closingTag: Bool?
     
     init(_ value: String) {
         if value.contains("</div>") {
-            self.endTag = true
+            self.closingTag = true
         } else if value.contains("<div ") {
-            self.endTag = false
+            self.closingTag = false
         }
         self.value = value
     }
     
-    func addTree(child: Tree) {
+    func addChild(child: Tree) {
         childrens.append(child)
         child.parent = self
     }
@@ -76,22 +76,21 @@ class Tree {
         var currentNode = rootNode
         
         for node in treeArr {
-            currentNode.addTree(child: node)
-            if let haveEndtag = node.endTag {
+            currentNode.addChild(child: node)
+            if let haveEndtag = node.closingTag {
                 if !haveEndtag{
-                    currentNode = node
+                    if node.value.first == "<" {
+                        currentNode = node
+                    }
                 } else if haveEndtag {
                     if let currentParent = node.parent {
                         currentNode = currentParent.parent ?? Tree("TOPTag")
                     }
                 }
             }
-            
         }
     }
 }
-
-
 
 extension Tree: Hashable {
     static func == (lhs: Tree, rhs: Tree) -> Bool {
