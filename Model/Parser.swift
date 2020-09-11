@@ -34,9 +34,7 @@ class Parser: NSObject {
         let urlSession = URLSession.shared
         let task = urlSession.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
-            guard var data2String = String(data: data, encoding: .utf8) else { return }
-            data2String = data2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "&lt;", with: "").replacingOccurrences(of: "&gt;", with: "")
-            
+            guard let data2String = String(data: data, encoding: .utf8) else { return }
             let parser = XMLParser(data: data2String.data(using: .utf8)!)
             parser.delegate = self
             parser.parse()
@@ -61,9 +59,9 @@ class Parser: NSObject {
             guard let html2String = html else {
                 fatalError("html 오류")
             }
+            let newStr = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "</br>", with: "<br>").replacingOccurrences(of: "<br/>", with: "<br>").replacingOccurrences(of: "<br />", with: "<br>").replacingOccurrences(of: ">", with: ">\n").replacingOccurrences(of: "<", with: "\n<").trimmingCharacters(in: .whitespacesAndNewlines)
             
-            let newStr = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: ">", with: ">\n").trimmingCharacters(in: .whitespacesAndNewlines)
-            let arr = newStr.components(separatedBy: "\n")
+            let arr = newStr.components(separatedBy: "\n").filter{$0 != ""}
             arr.forEach{treeArr.append(Tree($0))}
              
             rootNode.initalizeDOM(rootNode: rootNode, treeArr: treeArr)
@@ -82,6 +80,7 @@ class Parser: NSObject {
                 model.content = contentStr
                 Parser.self.count+=1
             }
+            
             self.imageValidation(newStr: newStr, model: model)
             
         }
