@@ -37,7 +37,10 @@ class NewsListViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
@@ -130,10 +133,12 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let newsContentVC = UIStoryboard(name: "NewsContent", bundle: nil).instantiateViewController(withIdentifier: "NewsContent") as! NewsContentViewController
         newsContentVC.modalPresentationStyle = .overFullScreen
         newsContentVC.url = Model.tempData[indexPath.row].link
         newsContentVC.articleTitle = Model.tempData[indexPath.row].title
+        
         if Model.tempData[indexPath.row].content!.contains("<img") {
             Model.tempData[indexPath.row].content! = Model.tempData[indexPath.row].content!.replacingOccurrences(of: "<img", with: "<img width=\"\(view.frame.width)\"")
         } else if Model.tempData[indexPath.row].content!.contains("<img") {
