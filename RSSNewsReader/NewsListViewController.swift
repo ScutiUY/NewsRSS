@@ -139,11 +139,6 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         newsContentVC.url = Model.tempData[indexPath.row].link
         newsContentVC.articleTitle = Model.tempData[indexPath.row].title
         
-        if Model.tempData[indexPath.row].content!.contains("<img") {
-            Model.tempData[indexPath.row].content! = Model.tempData[indexPath.row].content!.replacingOccurrences(of: "<img", with: "<img width=\"\(view.frame.width)\"")
-        } else if Model.tempData[indexPath.row].content!.contains("<img") {
-            Model.tempData[indexPath.row].content! = Model.tempData[indexPath.row].content!.replacingOccurrences(of: "style=", with: "style=\"width:\(view.frame.width);\"")
-        }
         newsContentVC.htmlStr = Model.tempData[indexPath.row].content!
         self.navigationController?.pushViewController(newsContentVC, animated: true)
     }
