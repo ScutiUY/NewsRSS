@@ -7,8 +7,17 @@
 //
 
 import UIKit
+import WebKit
 import SnapKit
 class NewsContentViewController: UIViewController {
+    
+    private let webKitView: WKWebView = {
+        var webKitView = WKWebView()
+        webKitView.backgroundColor = .white
+        webKitView.contentMode = .scaleToFill
+        
+        return webKitView
+    }()
     
     private let webView: UIWebView = {
         var webView = UIWebView()
@@ -16,7 +25,7 @@ class NewsContentViewController: UIViewController {
         webView.allowsInlineMediaPlayback = true
         webView.mediaPlaybackRequiresUserAction = false
         webView.contentMode = .scaleToFill
-        webView.scalesPageToFit = true
+        //webView.scalesPageToFit = true
         return webView
     }()
     
@@ -31,6 +40,7 @@ class NewsContentViewController: UIViewController {
         setLayout()
         setURL(url: url)
         print(url)
+        print(htmlStr)
     }
     
     private func setLayout() {
@@ -44,7 +54,7 @@ class NewsContentViewController: UIViewController {
     }
     
     func setURL(url: String) {
-        webView.loadHTMLString(htmlStr, baseURL: nil)
+        webView.loadHTMLString(htmlStr, baseURL: Bundle.main.resourceURL)
     }
     
 }
