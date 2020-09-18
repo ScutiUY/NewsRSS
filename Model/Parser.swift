@@ -12,7 +12,6 @@ class Parser: NSObject {
     static var shared = Parser()
     static var count = 0 {
         didSet {
-            //print(Model.newsData.count, Parser.count)
             if count == Model.newsData.count {
                 DispatchQueue.main.async {
                     NotificationCenter.default.post(name: Parser.parsingNoti, object: nil)
@@ -59,29 +58,25 @@ class Parser: NSObject {
             guard let html2String = html else {
                 fatalError("html 오류")
             }
-            let newStr = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "</br>", with: "<br>").replacingOccurrences(of: "<br/>", with: "<br>").replacingOccurrences(of: "<br />", with: "<br>").replacingOccurrences(of: ">", with: ">\n").replacingOccurrences(of: "<", with: "\n<").trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            let arr = newStr.components(separatedBy: "\n").filter{$0 != ""}
-            arr.forEach{treeArr.append(Tree($0))}
-             
-            rootNode.initalizeDOM(rootNode: rootNode, treeArr: treeArr)
-            
-            let dic: [Tree:Int] = rootNode.BFS(currentNode: rootNode)
-            
-            
-            if dic.max(by: {$0.value < $1.value}) != nil {
-                let newContent = dic.max{$0.value < $1.value}!.key
-                rootNode.DFS(currentNode: newContent, &contentStr)
-                model.content = contentStr
-                Parser.self.count+=1
-            } else if dic.max(by: {$0.value < $1.value}) == nil {
-                let newContent = rootNode
-                rootNode.DFS(currentNode: newContent, &contentStr)
-                model.content = contentStr
-                Parser.self.count+=1
+            print(model.link)
+            var removeHeadHtml = html2String.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "\t", with: "").getArrayAfterRegex(text: "<body.+</body>")
+            let new = removeHeadHtml[0].replacingOccurrences(of: "</script>", with: "</script>\n").replacingOccurrences(of: "<script", with: "\n<script").replacingOccurrences(of: "<style", with: "\n<style").replacingOccurrences(of: "</style>", with: "</style>\n").components(separatedBy: "\n")
+            for i in new {
+                if i.contains("<script") || i.contains("<style") {
+                    removeHeadHtml[0] = removeHeadHtml[0].replacingOccurrences(of: i, with: "")
+                }
             }
-            
-            self.imageValidation(newStr: newStr, model: model)
+            let newStr = removeHeadHtml[0].replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "\r", with: "").replacingOccurrences(of: "</br>", with: "<br>").replacingOccurrences(of: "<br/>", with: "<br>").replacingOccurrences(of: "<br />", with: "<br>").replacingOccurrences(of: "<Br>", with: "<br>").replacingOccurrences(of: "<P", with: "<p").replacingOccurrences(of: "</P", with: "</p").replacingOccurrences(of: "amp-", with: "").replacingOccurrences(of: ">", with: ">\n").replacingOccurrences(of: "<", with: "\n<").trimmingCharacters(in: .whitespacesAndNewlines)
+
+            let arr = newStr.components(separatedBy: "\n").map{$0.trimmingCharacters(in: .whitespacesAndNewlines)}.filter{$0 != ""}.filter{$0 != ""}.filter{!$0.contains("<!--")}
+            arr.forEach{treeArr.append(Tree($0))}
+
+            rootNode.initalizeDOM(rootNode: rootNode, treeArr: treeArr)
+
+            rootNode.dfs(currentNode: rootNode, &contentStr)
+            model.content = contentStr
+            Parser.self.count+=1
+            self.imageValidation(newStr: html2String, model: model)
             
         }
         task.resume()
