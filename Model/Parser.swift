@@ -32,7 +32,10 @@ class Parser: NSObject {
         let request = URLRequest(url: url)
         let urlSession = URLSession.shared
         let task = urlSession.dataTask(with: request) { (data, response, error) in
-            guard let data = data else { return }
+            guard let data = data else {
+                fatalError("Invalid urlData")
+                return
+            }
             guard let data2String = String(data: data, encoding: .utf8) else { return }
             let parser = XMLParser(data: data2String.data(using: .utf8)!)
             parser.delegate = self
@@ -107,21 +110,22 @@ class Parser: NSObject {
         return html
     }
     func getImage(_ arr: String) -> UIImage {
-        guard arr.contains("http") else { return UIImage(named: "No_Image")!
-        }
+        guard let noImage = UIImage(named: "No_Image") else { fatalError("Invalid Image") }
+        guard arr.contains("http") else { return noImage }
         var imageURL = arr.getArrayAfterRegex(text: "http.+\"")
         if imageURL == [] {
             imageURL = arr.getArrayAfterRegex(text: "http.+\'")
         }
         if imageURL == [] {
-            return UIImage(named: "No_Image")!
+            
+            return noImage
         }
         imageURL[0].removeLast()
         guard let urq = URL(string: imageURL[0]) else {
-            return UIImage(named: "No_Image")!
+            return noImage
         }
         guard let imageData = try? Data(contentsOf: urq) else {
-            return UIImage(named: "No_Image")!
+            return noImage
         }
         return UIImage(data: imageData)!
     }

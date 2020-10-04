@@ -87,6 +87,7 @@ class Tree {
             dfs(currentNode: element, &newHTML)
         }
     }
+    
     func initalizeDOM(rootNode: Tree, treeArr: [Tree]) {
         var currentNode = rootNode
         var textBlockArr = [Tree]()

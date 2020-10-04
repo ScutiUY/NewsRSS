@@ -21,10 +21,7 @@ class NewsListViewController: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "refresh")
         return refreshControl
     }()
-    
-    
     private let url = URL(string: "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko")
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +76,8 @@ class NewsListViewController: UIViewController {
     }
     
     private func fetchData() {
-        Parser.shared.parseFeed(url: self.url!)
+        guard let url = url else { fatalError("Invalid URL") }
+        Parser.shared.parseFeed(url: url)
         NotificationCenter.default.addObserver(forName: Parser.parsingNoti, object: nil, queue: .main) { (noti) in
             Model.tempData = Model.newsData
             self.newsTableView.reloadData()
